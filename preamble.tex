@@ -1,11 +1,13 @@
 \usepackage[letterpaper, margin=1.5in]{geometry}
 %\usepackage[compact, small]{titlesec}
-\usepackage{amsmath, amssymb}
+\usepackage{amsmath, amssymb, amsthm}
 \usepackage{color}
 \usepackage{comment}
 %\usepackage{hyperref}
 \usepackage[round,authoryear]{natbib}
 \usepackage{graphicx}
+\usepackage{nicefrac}
+%\usepackage{booktab} % TODO: install on mac
 
 \usepackage{datetime}
 \newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
@@ -22,10 +24,14 @@
 \newcommand{\cC}{\mathcal{C}}
 \newcommand{\cE}{\mathcal{E}}
 \newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
 \newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
 \newcommand{\cS}{\mathcal{S}}
 \newcommand{\cX}{\mathcal{X}}
 \newcommand{\cZ}{\mathcal{Z}}
+
+\newcommand{\one}{\mathbf{1}}
 
 \newcommand{\cond}{\;\middle\vert\;}
 \newcommand{\recip}[1]{\frac{1}{#1}}
@@ -33,7 +39,14 @@
 \DeclareMathOperator*{\argmax}{argmax\ }
 \DeclareMathOperator*{\argmin}{argmin\ }
 \DeclareMathOperator*{\Ebig}{\mathbb{E}\ }
+\DeclareMathOperator{\rank}{\textbf{rank}}
 
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO: #1}}}
 
 \hyphenation{Open-AI}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{assumptions}[theorem]{Assumptions}
+\newtheorem{definition}[theorem]{Definition}
