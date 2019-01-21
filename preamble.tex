@@ -1,13 +1,16 @@
-\usepackage[letterpaper, margin=1.5in]{geometry}
+%\usepackage[letterpaper, margin=1.5in]{geometry}
 %\usepackage[compact, small]{titlesec}
 \usepackage{amsmath, amssymb, amsthm}
+\usepackage{booktabs}
 \usepackage{color}
 \usepackage{comment}
-%\usepackage{hyperref}
-\usepackage[round,authoryear]{natbib}
+\usepackage{enumitem}
 \usepackage{graphicx}
+%\usepackage{hyperref}
+\usepackage{multicol}
+%\usepackage[round,authoryear]{natbib}
 \usepackage{nicefrac}
-%\usepackage{booktab} % TODO: install on mac
+\usepackage[table]{xcolor}
 
 \usepackage{datetime}
 \newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
@@ -22,6 +25,7 @@
 
 \newcommand{\cA}{\mathcal{A}}
 \newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
 \newcommand{\cE}{\mathcal{E}}
 \newcommand{\cH}{\mathcal{H}}
 \newcommand{\cI}{\mathcal{I}}
@@ -35,9 +39,12 @@
 
 \newcommand{\cond}{\;\middle\vert\;}
 \newcommand{\recip}[1]{\frac{1}{#1}}
+\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 
 \DeclareMathOperator*{\argmax}{argmax\ }
 \DeclareMathOperator*{\argmin}{argmin\ }
+\DeclareMathOperator*{\minimize}{minimize\ }
+\DeclareMathOperator*{\maximize}{maximize\ }
 \DeclareMathOperator*{\Ebig}{\mathbb{E}\ }
 \DeclareMathOperator{\rank}{\textbf{rank}}
 
