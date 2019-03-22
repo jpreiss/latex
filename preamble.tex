@@ -8,9 +8,13 @@
 \usepackage{graphicx}
 %\usepackage{hyperref}
 \usepackage{multicol}
-%\usepackage[round,authoryear]{natbib}
+\PassOptionsToPackage{round,authoryear}{natbib}
 \usepackage{nicefrac}
 \usepackage[table]{xcolor}
+\usepackage{url}
+\usepackage{siunitx}
+\usepackage{cleveref}
+\usepackage{listings}
 
 \usepackage{datetime}
 \newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
@@ -32,6 +36,7 @@
 \newcommand{\cO}{\mathcal{O}}
 \newcommand{\cP}{\mathcal{P}}
 \newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
 \newcommand{\cX}{\mathcal{X}}
 \newcommand{\cZ}{\mathcal{Z}}
 
@@ -39,6 +44,7 @@
 
 \newcommand{\cond}{\;\middle\vert\;}
 \newcommand{\recip}[1]{\frac{1}{#1}}
+\newcommand{\half}{\frac{1}{2}}
 \newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 
 \DeclareMathOperator*{\argmax}{argmax\ }
@@ -47,6 +53,11 @@
 \DeclareMathOperator*{\maximize}{maximize\ }
 \DeclareMathOperator*{\Ebig}{\mathbb{E}\ }
 \DeclareMathOperator{\rank}{\textbf{rank}}
+\DeclareMathOperator{\Tr}{\textbf{Tr}}
+\DeclareMathOperator{\Normal}{\mathcal{N}}
+\DeclareMathOperator{\clip}{clip}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Var}{Var}
 
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO: #1}}}
 
