@@ -19,11 +19,6 @@
   number    = {4},
   pages     = {2096--2103},
   year      = {2017},
-  url       = {https://doi.org/10.1109/LRA.2017.2720851},
-  doi       = {10.1109/LRA.2017.2720851},
-  timestamp = {Wed, 09 Aug 2017 15:50:12 +0200},
-  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/ral/HwangboSSH17},
-  bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 
 @inproceedings{sadeghi-cad2rl-rss17,
@@ -271,11 +266,12 @@
 
 @article{yu-up-osi-rss17,
   author    = {Wenhao Yu and
+               Jie Tan and
                C. Karen Liu and
                Greg Turk},
   title     = {Preparing for the Unknown: Learning a Universal Policy with Online
                System Identification},
-  booktitle={Robotics: Science and Systems(RSS)},
+  journal={Robotics: Science and Systems (RSS)},
   year      = {2017},
 }
 
@@ -620,9 +616,10 @@
 }
 
 @article{OpenAI-dexterous,
-  author    = {{OpenAI team}},
+  author    = {OpenAI},
   title     = {Learning Dexterous In-Hand Manipulation},
-  journal   = {Unpublished (blog post)},
+  journal   = {CoRR},
+  volume    = {abs/1808.00177},
   year      = {2018}
 }
 
@@ -1016,5 +1013,208 @@ month={},}
   journal   = {CoRR},
   volume    = {abs/1711.10925},
   year      = {2017}
+}
+
+@article{fujimoto-actor-critic-approx-error,
+  author    = {Scott Fujimoto and
+               Herke van Hoof and
+               Dave Meger},
+  title     = {Addressing Function Approximation Error in Actor-Critic Methods},
+  journal   = {CoRR},
+  volume    = {abs/1802.09477},
+  year      = {2018}
+}
+
+@article{mania-random-search-RL,
+  author    = {Horia Mania and
+               Aurelia Guy and
+               Benjamin Recht},
+  title     = {Simple random search provides a competitive approach to reinforcement
+               learning},
+  journal   = {CoRR},
+  volume    = {abs/1803.07055},
+  year      = {2018}
+}
+
+
+@inproceedings{hausman-embedding-2018,
+  author = {Karol Hausman and
+            Jost Tobias Springenberg and
+            Ziyu Wang and
+            Nicolas Heess and
+            Martin Riedmiller},
+  title = {Learning an Embedding Space for Transferable Robot Skills},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year = {2018},
+}
+
+@mastersthesis{forster-crazyflie-sysid,
+  title={System identification of the {C}razyflie 2.0 nano quadrocopter},
+  author={F{\"o}rster, Julian},
+  type={{B.S.} thesis},
+  year={2015},
+  school={ETH Zurich}
+}
+
+@inproceedings{mellinger-minsnap,
+  author    = {Daniel Mellinger and
+               Vijay Kumar},
+  title     = {Minimum snap trajectory generation and control for quadrotors},
+  booktitle = {{ICRA}},
+  pages     = {2520--2525},
+  publisher = {{IEEE}},
+  year      = {2011}
+}
+
+@inproceedings{neural-ODE,
+  author    = {Tian Qi Chen and
+               Yulia Rubanova and
+               Jesse Bettencourt and
+               David K. Duvenaud},
+  title     = {Neural Ordinary Differential Equations},
+  booktitle = {NeurIPS},
+  pages     = {6572--6583},
+  year      = {2018}
+}
+
+@inproceedings{Q-learning-nearest-neighbors,
+  author    = {Devavrat Shah and
+               Qiaomin Xie},
+  title     = {Q-learning with Nearest Neighbors},
+  booktitle = {NeurIPS},
+  pages     = {3115--3125},
+  year      = {2018}
+}
+
+@article{finn-gan-IRL-connection,
+  author    = {Chelsea Finn and
+               Paul F. Christiano and
+               Pieter Abbeel and
+               Sergey Levine},
+  title     = {A Connection between Generative Adversarial Networks, Inverse Reinforcement
+               Learning, and Energy-Based Models},
+  journal   = {CoRR},
+  volume    = {abs/1611.03852},
+  year      = {2016}
+}
+
+
+@article{bordenave-circular-law,
+  title={Around the circular law},
+  author={Bordenave, Charles and Chafa{\"\i}, Djalil and others},
+  journal={Probability surveys},
+  volume={9},
+  year={2012}
+}
+
+@inproceedings{glorot-initialization,
+  author    = {Xavier Glorot and
+               Yoshua Bengio},
+  title     = {Understanding the difficulty of training deep feedforward neural networks},
+  booktitle = {{AISTATS}},
+  series    = {{JMLR} Proceedings},
+  volume    = {9},
+  pages     = {249--256},
+  publisher = {JMLR.org},
+  year      = {2010}
+}
+
+% TODO: Multitask hardness stuff
+
+@article{DBLP:journals/mmor/Hinderer05,
+  author    = {Karl Hinderer},
+  title     = {Lipschitz Continuity of Value Functions in Markovian Decision Processes},
+  journal   = {Math. Meth. of {OR}},
+  volume    = {62},
+  number    = {1},
+  pages     = {3--22},
+  year      = {2005}
+}
+
+@inproceedings{DBLP:conf/icml/AsadiML18,
+  author    = {Kavosh Asadi and
+               Dipendra Misra and
+               Michael L. Littman},
+  title     = {Lipschitz Continuity in Model-based Reinforcement Learning},
+  booktitle = {{ICML}},
+  series    = {{JMLR} Workshop and Conference Proceedings},
+  volume    = {80},
+  pages     = {264--273},
+  publisher = {JMLR.org},
+  year      = {2018}
+}
+
+@incollection{rockafellar2008linear,
+  title={Linear-Convex Control and Duality},
+  author={Rockafellar, RT and Goebel, Rafal},
+  booktitle={Geometric Control And Nonsmooth Analysis: In Honor of the 73rd Birthday of H Hermes and of the 71st Birthday of RT Rockafellar},
+  pages={280--299},
+  year={2008},
+  publisher={World Scientific}
+}
+
+@article{DBLP:journals/jgo/Rockafellar04,
+  author    = {R. Tyrrell Rockafellar},
+  title     = {Hamilton-Jacobi Theory and Parametric Analysis in Fully Convex Problems
+               of Optimal Control},
+  journal   = {J. Global Optimization},
+  volume    = {28},
+  number    = {3-4},
+  pages     = {419--431},
+  year      = {2004}
+}
+
+@inproceedings{DBLP:journals/jmlr/Abbasi-YadkoriS11,
+  author    = {Yasin Abbasi{-}Yadkori and
+               Csaba Szepesv{\'{a}}ri},
+  title     = {Regret Bounds for the Adaptive Control of Linear Quadratic Systems},
+  booktitle = {{COLT}},
+  series    = {{JMLR} Proceedings},
+  volume    = {19},
+  pages     = {1--26},
+  publisher = {JMLR.org},
+  year      = {2011}
+}
+
+@inproceedings{DBLP:conf/nips/Kobilarov15,
+  author    = {Marin Kobilarov},
+  title     = {Sample Complexity Bounds for Iterative Stochastic Policy Optimization},
+  booktitle = {{NIPS}},
+  pages     = {3114--3122},
+  year      = {2015}
+}
+
+@article{article,
+author = {Machandranath Kakade, Sham},
+year = {2003},
+month = {01},
+pages = {},
+title = {On the Sample Complexity of Reinforcement Learning}
+}
+
+@article{article,
+author = {Bradtke, Steven and Ydstie, B.Erik and G. Barto, Andrew},
+year = {1994},
+month = {09},
+pages = {},
+title = {Adaptive Linear Quadratic Control Using Policy Iteration},
+volume = {3},
+journal = {Proceedings of the American Control Conference},
+doi = {10.1109/ACC.1994.735224}
+}
+
+@article{HINRICHSEN19861,
+title = "Stability radii of linear systems",
+journal = "Systems \& Control Letters",
+volume = "7",
+number = "1",
+pages = "1 - 10",
+year = "1986",
+issn = "0167-6911",
+doi = "https://doi.org/10.1016/0167-6911(86)90094-0",
+url = "http://www.sciencedirect.com/science/article/pii/0167691186900940",
+author = "D. Hinrichsen and A.J. Pritchard",
+keywords = "Robust stability, Distance from instability, Linear state space system",
+abstract = "In this note the concepts of real and complex stability radii are introduced and some of their properties discussed."
 }
 
