@@ -27,18 +27,11 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 
-\newcommand{\cA}{\mathcal{A}}
-\newcommand{\cC}{\mathcal{C}}
-\newcommand{\cD}{\mathcal{D}}
-\newcommand{\cE}{\mathcal{E}}
-\newcommand{\cH}{\mathcal{H}}
-\newcommand{\cI}{\mathcal{I}}
-\newcommand{\cO}{\mathcal{O}}
-\newcommand{\cP}{\mathcal{P}}
-\newcommand{\cS}{\mathcal{S}}
-\newcommand{\cU}{\mathcal{U}}
-\newcommand{\cX}{\mathcal{X}}
-\newcommand{\cZ}{\mathcal{Z}}
+% Black magic from StackExchange.
+% Defines mathcal macros such that \cA = \mathcal{A}, and so on.
+\def\mydefc#1{\expandafter\def\csname c#1\endcsname{\mathcal{#1}}}
+\def\mydefallc#1{\ifx#1\mydefallc\else\mydefc#1\expandafter\mydefallc\fi}
+\mydefallc ABCDEFGHIJKLMNOPQRSTUVWXYZ\mydefallc
 
 \newcommand{\one}{\mathbf{1}}
 
