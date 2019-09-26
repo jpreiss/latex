@@ -35,11 +35,13 @@
 \mydefallc ABCDEFGHIJKLMNOPQRSTUVWXYZ\mydefallc
 
 \newcommand{\one}{\mathbf{1}}
+\newcommand{\zero}{\mathbf{0}}
 
 \newcommand{\cond}{\;\middle\vert\;}
 \newcommand{\recip}[1]{\frac{1}{#1}}
 \newcommand{\half}{\frac{1}{2}}
 \newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\Indicator}[1]{\I_{\{#1\}}}
 
 \DeclareMathOperator*{\argmax}{argmax\ }
 \DeclareMathOperator*{\argmin}{argmin\ }
@@ -48,12 +50,17 @@
 \DeclareMathOperator*{\Ebig}{\mathbb{E}\ }
 \DeclareMathOperator{\rank}{\textbf{rank}}
 \DeclareMathOperator{\Tr}{\textbf{Tr}}
-\DeclareMathOperator{\Normal}{\mathcal{N}}
 \DeclareMathOperator{\clip}{clip}
 \DeclareMathOperator{\diag}{diag}
 \DeclareMathOperator{\Var}{Var}
 \DeclareMathOperator{\VCDim}{VCDim}
 \DeclareMathOperator{\Vol}{Vol}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\iid}{iid}
+
+% Probability distributions.
+\DeclareMathOperator{\Normal}{\mathcal{N}}
+\DeclareMathOperator{\Uniform}{Uniform}
 
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
