@@ -1,32 +1,24 @@
-%\usepackage[letterpaper, margin=1.5in]{geometry}
-%\usepackage[compact, small]{titlesec}
+% TODO: does this belong here?
+\PassOptionsToPackage{round,authoryear}{natbib}
+
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{booktabs}
+\usepackage{cleveref}
 \usepackage{color}
 \usepackage{comment}
 \usepackage{enumitem}
 \usepackage{graphicx}
-%\usepackage{hyperref}
+\usepackage{listings}
 \usepackage{mathtools}
 \usepackage{multicol}
-\PassOptionsToPackage{round,authoryear}{natbib}
 \usepackage{nicefrac}
-\usepackage[table]{xcolor}
-\usepackage{url}
 \usepackage{siunitx}
-\usepackage{cleveref}
-\usepackage{listings}
+\usepackage{url}
+\usepackage[table]{xcolor}
 
+% For documents when the particular day is not important.
 \usepackage{datetime}
 \newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
-
-\newcommand{\E}{\mathbb{E}}
-\newcommand{\I}{\mathbb{I}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
 
 % Black magic from StackExchange.
 % Defines mathcal macros such that \cA = \mathcal{A}, and so on.
@@ -34,46 +26,73 @@
 \def\mydefallc#1{\ifx#1\mydefallc\else\mydefc#1\expandafter\mydefallc\fi}
 \mydefallc ABCDEFGHIJKLMNOPQRSTUVWXYZ\mydefallc
 
+% Sets of numbers.
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+% Bold and blackboard symbols.
 \newcommand{\one}{\mathbf{1}}
 \newcommand{\zero}{\mathbf{0}}
+\newcommand{\I}{\mathbb{I}}  % For an indicator random variable.
 
-\newcommand{\cond}{\;\middle\vert\;}
-\newcommand{\recip}[1]{\frac{1}{#1}}
+% Constants.
 \newcommand{\half}{\frac{1}{2}}
-\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
-\newcommand{\Indicator}[1]{\I_{\{#1\}}}
 
-\DeclareMathOperator*{\argmax}{argmax\ }
-\DeclareMathOperator*{\argmin}{argmin\ }
-\DeclareMathOperator*{\minimize}{minimize\ }
-\DeclareMathOperator*{\maximize}{maximize\ }
-\DeclareMathOperator*{\Ebig}{\mathbb{E}\ }
-\DeclareMathOperator{\rank}{\textbf{rank}}
-\DeclareMathOperator{\Tr}{\textbf{Tr}}
+% Primitives.
 \DeclareMathOperator{\clip}{clip}
-\DeclareMathOperator{\diag}{diag}
-\DeclareMathOperator{\Var}{Var}
-\DeclareMathOperator{\VCDim}{VCDim}
-\DeclareMathOperator{\Vol}{Vol}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Vol}{Vol}  % Backwards compatibility - prefer lowercase!
 \DeclareMathOperator{\sign}{sign}
-\DeclareMathOperator{\iid}{iid}
+\newcommand{\recip}[1]{\frac{1}{#1}}
 
-% Probability distributions.
-\DeclareMathOperator{\Normal}{\mathcal{N}}
-\DeclareMathOperator{\Uniform}{Uniform}
-
+% Delimiters.
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 \DeclarePairedDelimiter{\inner}{\langle}{\rangle}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 
-\newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO: #1}}}
+% Linear algebra and matrices.
+\DeclareMathOperator{\rank}{\textbf{rank}}
+\DeclareMathOperator{\Tr}{\textbf{Tr}}
+\DeclareMathOperator{\diag}{diag}
+\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 
-\hyphenation{Open-AI}
+% Optimization.
+\DeclareMathOperator*{\argmax}{argmax\ }
+\DeclareMathOperator*{\argmin}{argmin\ }
+\DeclareMathOperator*{\minimize}{minimize\ }
+\DeclareMathOperator*{\maximize}{maximize\ }
 
+% Probability distributions.
+\DeclareMathOperator{\Normal}{\mathcal{N}}
+\DeclareMathOperator{\Binomial}{Binomial}
+\DeclareMathOperator{\Uniform}{Uniform}
+
+% Other probability stuff.
+\newcommand{\E}{\mathbb{E}\, }
+\DeclareMathOperator{\iid}{iid}
+\DeclareMathOperator{\Var}{Var}
+\newcommand{\Indicator}[1]{\I_{\{#1\}}}
+\newcommand{\cond}{\;\middle\vert\;}
+
+% Learning stuff.
+\DeclareMathOperator{\VCDim}{VCDim}
+\DeclareMathOperator{\Reg}{Reg}
+
+% Theorem counters.
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{assumptions}[theorem]{Assumptions}
 \newtheorem{definition}[theorem]{Definition}
+
+% Hyphenations.
+\hyphenation{Open-AI}
+
+% Draft annotation tools.
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO: #1}}}
+
