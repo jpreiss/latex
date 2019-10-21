@@ -7,6 +7,7 @@
 \usepackage{color}
 \usepackage{comment}
 \usepackage{enumitem}
+\usepackage{framed}
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{mathtools}
@@ -80,7 +81,8 @@
 \newcommand{\cond}{\;\middle\vert\;}
 
 % Learning stuff.
-\DeclareMathOperator{\VCDim}{VCDim}
+\DeclareMathOperator{\VCdim}{VCdim}
+\DeclareMathOperator{\Ldim}{Ldim}
 \DeclareMathOperator{\Reg}{Reg}
 
 % Theorem counters.
@@ -89,6 +91,9 @@
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{assumptions}[theorem]{Assumptions}
 \newtheorem{definition}[theorem]{Definition}
+
+% Miscellaneous.
+\renewcommand{\th}{^{\mathrm{th}}}
 
 % Hyphenations.
 \hyphenation{Open-AI}
