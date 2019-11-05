@@ -39,15 +39,18 @@
 \newcommand{\zero}{\mathbf{0}}
 \newcommand{\I}{\mathbb{I}}  % For an indicator random variable.
 
-% Constants.
-\newcommand{\half}{\frac{1}{2}}
+% Common fractions.
+\newcommand{\recip}[1]{\frac{1}{#1}}
+\newcommand{\half}{\recip{2}}
+\newcommand{\invsqrt}[1]{\recip{\sqrt{#1}}}
 
 % Primitives.
 \DeclareMathOperator{\clip}{clip}
 \DeclareMathOperator{\vol}{vol}
 \DeclareMathOperator{\Vol}{Vol}  % Backwards compatibility - prefer lowercase!
 \DeclareMathOperator{\sign}{sign}
-\newcommand{\recip}[1]{\frac{1}{#1}}
+\DeclareMathOperator{\suchthat}{such\ that}
+\DeclareMathOperator{\subjto}{subject\ to}
 
 % Delimiters.
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
@@ -68,6 +71,9 @@
 \DeclareMathOperator*{\minimize}{minimize\ }
 \DeclareMathOperator*{\maximize}{maximize\ }
 
+% Geometry.
+\DeclareMathOperator{\conv}{conv}
+
 % Probability distributions.
 \DeclareMathOperator{\Normal}{\mathcal{N}}
 \DeclareMathOperator{\Binomial}{Binomial}
@@ -84,6 +90,8 @@
 \DeclareMathOperator{\VCdim}{VCdim}
 \DeclareMathOperator{\Ldim}{Ldim}
 \DeclareMathOperator{\Reg}{Reg}
+\DeclareMathOperator{\fat}{fat}
+\DeclareMathOperator{\sfat}{sfat}
 
 % Theorem counters.
 \newtheorem{theorem}{Theorem}[section]
@@ -91,6 +99,7 @@
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{assumptions}[theorem]{Assumptions}
 \newtheorem{definition}[theorem]{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
 
 % Miscellaneous.
 \renewcommand{\th}{^{\mathrm{th}}}
