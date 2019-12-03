@@ -17,6 +17,11 @@
 \usepackage{url}
 \usepackage[table]{xcolor}
 
+% Make the penalty for breaking inline math across lines much higher.
+% Override in particular equations by inserting \allowbreak.
+\binoppenalty=9999
+\relpenalty=9999
+
 % For documents when the particular day is not important.
 \usepackage{datetime}
 \newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
@@ -44,6 +49,10 @@
 \newcommand{\half}{\recip{2}}
 \newcommand{\invsqrt}[1]{\recip{\sqrt{#1}}}
 
+% Common summations.
+\newcommand{\sumin}{\sum_{i=1}^n}
+\newcommand{\sumtn}{\sum_{t=1}^n}
+
 % Primitives.
 \DeclareMathOperator{\clip}{clip}
 \DeclareMathOperator{\vol}{vol}
@@ -51,6 +60,7 @@
 \DeclareMathOperator{\sign}{sign}
 \DeclareMathOperator{\suchthat}{such\ that}
 \DeclareMathOperator{\subjto}{subject\ to}
+\DeclareMathOperator{\otherwise}{otherwise}
 
 % Delimiters.
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
@@ -64,6 +74,9 @@
 \DeclareMathOperator{\Tr}{\textbf{Tr}}
 \DeclareMathOperator{\diag}{diag}
 \newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+
+% Calculus.
+\newcommand{\partialby}[1]{\frac{\partial}{\partial #1}}
 
 % Optimization.
 \DeclareMathOperator*{\argmax}{argmax\ }
@@ -92,6 +105,7 @@
 \DeclareMathOperator{\Reg}{Reg}
 \DeclareMathOperator{\fat}{fat}
 \DeclareMathOperator{\sfat}{sfat}
+\DeclareMathOperator{\UCB}{UCB}
 
 % Theorem counters.
 \newtheorem{theorem}{Theorem}[section]
@@ -100,6 +114,7 @@
 \newtheorem{assumptions}[theorem]{Assumptions}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
 
 % Miscellaneous.
 \renewcommand{\th}{^{\mathrm{th}}}
