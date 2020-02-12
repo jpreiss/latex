@@ -1,18 +1,54 @@
-\documentclass{beamer}
+% Clean Beamer template.
+% Author: James A. Preiss.
+% 2020.
+
+% aspectratio=149 - Aspect ratio middle ground between 4:3 and 16:9.
+% xcolor={dvipsnames} - Load named colors. Color table:
+%   en.wikibooks.org/wiki/LaTeX/Colors#The_68_standard_colors_known_to_dvips
+\documentclass[aspectratio=149,xcolor={dvipsnames}]{beamer}
+
+% Use red-tinted greys, inspired by selenium-toned analog B/W prints.
+\definecolor{Selenium}{rgb}{0.24, 0.22, 0.22}
+\definecolor{Paper}{rgb}{0.98, 0.97, 0.97}
+\usecolortheme[named=Selenium]{structure}
+\setbeamercolor{background canvas}{bg=Paper}
+\setbeamercolor{normal text}{fg=Selenium!30!Black}
+
+% Serif font for math, default sans-serif for text.
 \usefonttheme[onlymath]{serif}
-% enable to get point-by-point reveals
+
+% height=10mm - Reduce height of blue title bar.
+\usetheme[height=10mm]{Rochester}
+
+% Enable line below to get point-by-point reveals.
 %\beamerdefaultoverlayspecification{<+->}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{color}
-\usepackage{comment}
-\usepackage{datetime}
 
-\newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
+% Remove navigation symbols from bottom of slide.
+\setbeamertemplate{navigation symbols}{}
 
+% At section transitions, highlight the section we are about to start
+% at its place in the contents, with the other sections greyed-out.
+\AtBeginSection[]
+{
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents[currentsection]
+\end{frame}
+}
+
+% Reduce the amount of space above and below display math.
+\AtBeginDocument{
+\setlength{\abovedisplayskip}{7pt}
+\setlength{\belowdisplayskip}{7pt}
+}
+
+% Command for adding sigleton sub-list. Useful for remarks, details, etc.
 \newcommand{\subitem}[1]{\begin{itemize} \item #1 \end{itemize}}
 
-\newcommand{\R}{\mathbb{R}}
+% Remove day because it's not important.
+\usepackage{datetime}
+\newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
+
 
 
 \title{Title}
@@ -26,10 +62,7 @@
 \frame{\titlepage}
 
 
-\begin{frame}
-\frametitle{Frame Title}
-\begin{center}
-\end{center}
+\begin{frame}{Frame Title}
 \end{frame}
 
 
