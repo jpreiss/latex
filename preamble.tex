@@ -16,8 +16,8 @@
 \usepackage{multicol}
 \usepackage{nicefrac}
 \usepackage{siunitx}
+\usepackage{tcolorbox}
 \usepackage{url}
-\usepackage[table]{xcolor}
 
 % Make the penalty for breaking inline math across lines much higher.
 % Override in particular equations by inserting \allowbreak.
@@ -40,6 +40,12 @@
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}  % Generic field.
+
+% Common sets.
+\newcommand{\ball}{\cB}
+\newcommand{\PSD}{\mathbb{S}_+}
+\newcommand{\PD}{\mathbb{S}_{++}}
 
 % Bold and blackboard symbols.
 \newcommand{\one}{\mathbf{1}}
@@ -61,6 +67,7 @@
 \DeclareMathOperator{\Vol}{Vol}  % Backwards compatibility - prefer lowercase!
 \DeclareMathOperator{\sign}{sign}
 \DeclareMathOperator{\suchthat}{such\ that}
+\DeclareMathOperator{\st}{s.t.}
 \DeclareMathOperator{\subjto}{subject\ to}
 \DeclareMathOperator{\otherwise}{otherwise}
 
@@ -72,8 +79,8 @@
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 
 % Linear algebra and matrices.
-\DeclareMathOperator{\rank}{\textbf{rank}}
-\DeclareMathOperator{\Tr}{\textbf{Tr}}
+\DeclareMathOperator{\rank}{\mathbf{rank}}
+\DeclareMathOperator{\Tr}{\mathbf{Tr}}
 \DeclareMathOperator{\diag}{diag}
 \newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 
@@ -85,9 +92,11 @@
 \DeclareMathOperator*{\argmin}{argmin\ }
 \DeclareMathOperator*{\minimize}{minimize\ }
 \DeclareMathOperator*{\maximize}{maximize\ }
+\DeclareMathOperator{\OPT}{OPT}
 
 % Geometry.
 \DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\ext}{ext}
 
 % Probability distributions.
 \DeclareMathOperator{\Normal}{\mathcal{N}}
@@ -118,6 +127,8 @@
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
 
 % Miscellaneous.
 \renewcommand{\th}{^{\mathrm{th}}}
@@ -127,4 +138,16 @@
 
 % Draft annotation tools.
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO: #1}}}
+
+% Page layout tools.
+\newtcolorbox{boxnote}{
+	colback=black!8!white,
+	colframe=black,
+	sharp corners,
+	rightrule=0.15mm,
+	toprule=0.15mm,
+	leftrule=0.15mm,
+	bottomrule=0.15mm,
+	beforeafter skip=8mm
+}
 
