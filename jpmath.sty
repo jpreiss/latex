@@ -21,11 +21,16 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\F}{\mathbb{F}}  % Generic field.
+\newcommand{\Rpos}{\R_{> 0}}
+\newcommand{\Rnonneg}{\R_{\geq 0}}
 
 % Common sets.
 \newcommand{\ball}{\cB}
 \newcommand{\PSD}[1]{\mathbb{S}_+^{#1}}
 \newcommand{\PD}[1]{\mathbb{S}_{++}^{#1}}
+\newcommand{\Rnn}{\R^{n \times n}}
+\newcommand{\Rnm}{\R^{n \times m}}
+\newcommand{\Rmn}{\R^{m \times n}}
 
 % Bold and blackboard symbols.
 \newcommand{\one}{\mathbf{1}}
@@ -56,13 +61,17 @@
 
 % Linear algebra and matrices.
 \DeclareMathOperator{\rank}{\mathbf{rank}}
-\DeclareMathOperator{\Tr}{\mathbf{Tr}}
+\DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\diag}{diag}
+% TODO how to renewcommand for MathOperator
+\renewcommand{\Vec}{\mathrm{Vec}}
 \newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 \newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
 
-% Calculus.
+% Calculus / analysis.
 \newcommand{\partialby}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\Lip}[1]{\mathrm{Lip}(#1)}
+\renewcommand{\d}{\mathrm{d}}
 
 % Optimization.
 \DeclareMathOperator*{\argmax}{argmax\ }
@@ -83,12 +92,14 @@
 
 % Other probability stuff.
 \newcommand{\E}{\mathbb{E}\, }
-\DeclareMathOperator{\iid}{iid}
+\newcommand{\iid}{\mathrm{iid}}
 \DeclareMathOperator{\Var}{Var}
+\newcommand{\Simplex}[1]{\Delta(#1)} % TODO: how to make it use \left( \right) without a preceding space?
 \newcommand{\Indicator}[1]{\I_{\{#1\}}}
 \newcommand{\cond}{\;\middle\vert\;}
 
 % Learning stuff.
+\DeclareMathOperator{\Rad}{R}
 \DeclareMathOperator{\VCdim}{VCdim}
 \DeclareMathOperator{\Ldim}{Ldim}
 \DeclareMathOperator{\Reg}{Reg}
@@ -96,6 +107,12 @@
 \DeclareMathOperator{\fat}{fat}
 \DeclareMathOperator{\sfat}{sfat}
 \DeclareMathOperator{\UCB}{UCB}
+
+% Control stuff.
+\newcommand{\Laplace}{\cL}
+
+% CS, complexity, etc.
+\DeclareMathOperator{\poly}{poly}
 
 % Miscellaneous.
 \renewcommand{\th}{^{\mathrm{th}}}

@@ -1,6 +1,8 @@
 % Non-math stuff that can be shared between article and beamer.
 % and regular articles.
 
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{booktabs}
@@ -12,6 +14,7 @@
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{multicol}
+\usepackage{subcaption}
 \usepackage{tcolorbox}
 \usepackage{url}
 
@@ -20,6 +23,7 @@
 
 % Draft annotation tools.
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO: #1}}}
+\newcommand{\idea}[1]{\textcolor{ProcessBlue}{\textbf{IDEA: #1}}}
 
 % Hyphenations.
 \hyphenation{Open-AI}
