@@ -1,20 +1,16 @@
 % Low-color, simple Beamer template.
 % Author: James A. Preiss.
-% 2020.
-%
-% TODO: style file should take a parameter for overall tint
+% 2020 - 2021.
 
-% aspectratio=149 - Aspect ratio middle ground between 4:3 and 16:9.
-% xcolor={dvipsnames} - Load named colors. Color table:
-%   en.wikibooks.org/wiki/LaTeX/Colors#The_68_standard_colors_known_to_dvips
-%
 
 \usepackage{jpmath}
 \usepackage{jptext}
+\usepackage{xpatch}
 
-%----------------------%
-% Beamer configuration %
-%----------------------%
+
+%------------------%
+% Fonts and colors %
+%------------------%
 
 % Main color for titlebar.
 \definecolor{DarkGrey}{rgb}{0.22, 0.22, 0.24}
@@ -25,25 +21,59 @@
 % A saturated but legible color to draw attention to some text.
 \definecolor{TextEmph}{rgb}{0.25, 0.25, 0.95}
 
+% A color used to highlight "good" terms in an equation.
+\definecolor{TextGood}{rgb}{0.0, 0.7, 0.1}
+
+% A color used to highlight "bad" terms in an equation.
+\definecolor{TextBad}{rgb}{0.8, 0.0, 0.1}
+
 % Set DarkGrey as the main color for titlebar, etc.
 \usecolortheme[named=DarkGrey]{structure}
 
 % Make text a tiny bit lighter than black.
 \setbeamercolor{normal text}{fg=DarkGrey!30!Black}
 
-% Serif font for math, default sans-serif for text.
-\usefonttheme[onlymath]{serif}
+% Serif font everywhere.
+\usefonttheme{serif}
 
-% height=10mm - Reduce height of blue title bar.
-\usetheme[height=10mm]{Rochester}
 
-\setlength{\parskip}{2mm}
+%--------%
+% Layout %
+%--------%
 
-% Enable line below to get point-by-point reveals.
-%\beamerdefaultoverlayspecification{<+->}
+% Note: Layout optimized for non-default 10pt text size.
+% We reduce the paper size and margins so we get the improved legibility
+% features of the smaller font size without raising text density.
+
+% Reduce paper size.
+\geometry{papersize={11cm,8cm}}
+
+% Reduce margins to accompany smaller paper.
+\setbeamersize{text margin left=7mm,text margin right=7mm}
+
+% Make titles stand out more with sans-serif large font.
+\setbeamerfont{frametitle}{size=\large,family=\sffamily}
+
+% Reduce height of title bar.
+\usetheme[height=7mm]{Rochester}
+
+% Reduce the amount of space above and below display math.
+\AtBeginDocument{
+    \setlength{\abovedisplayskip}{5pt}
+    \setlength{\belowdisplayskip}{6pt}
+}
+
+% Increase the default spacing of tables.
+\renewcommand{\arraystretch}{1.2}
+
+
+%---------%
+% Content %
+%---------%
 
 % Remove navigation symbols from bottom of slide, but restore slide numbers.
 \setbeamertemplate{navigation symbols}{}
+
 % TODO: [number] instead of [number]/[total].
 \setbeamertemplate{footline}[frame number]
 
@@ -56,11 +86,6 @@
     \end{frame}
 }
 
-% Reduce the amount of space above and below display math.
-\AtBeginDocument{
-    \setlength{\abovedisplayskip}{9pt}
-    \setlength{\belowdisplayskip}{10pt}
-}
 
 %--------------%
 % New commands %
@@ -72,8 +97,10 @@
 % Lighten less-important text to recede into background.
 \renewcommand{\note}[1]{\textcolor{TextNote}{#1}}
 
-% Emphasize important text with a vivid color.
+% Emphasize important/good/bad text with a vivid color.
 \newcommand{\coloremph}[1]{\textcolor{TextEmph}{#1}}
+\newcommand{\colorgood}[1]{\textcolor{TextGood}{#1}}
+\newcommand{\colorbad}[1]{\textcolor{TextBad}{#1}}
 
 % Small grey text in lower-right corner for e.g. image credits.
 % TODO: fixed distance from slide bottom regardless of content height.
@@ -83,10 +110,26 @@
     \vspace{-2mm}
 }
 
-%-----------------------%
-% General configuration %
-%-----------------------%
+% Commands to set the text color for a whole table row.
+% NOTE: requires the column type modifiers = and +.
+\newcommand*{\@rowstyle}{}
 
-% Increase the default spacing of tables.
-\renewcommand{\arraystretch}{1.4}
+\newcommand*{\rowstyle}[1]{% sets the style of the next row
+  \gdef\@rowstyle{#1}%
+  \@rowstyle\ignorespaces%
+}
+
+\newcolumntype{=}{% resets the row style
+  >{\gdef\@rowstyle{}}%
+}
+
+\newcolumntype{+}{% adds the current row style to the next column
+  >{\@rowstyle}%
+}
+
+% Commands to reveal "good" and "bad" terms in equations and tables.
+\newcommand{\revealgood}[1]{\only<1>{#1} \only<2>{\color{TextGood}#1}}
+\newcommand{\revealbad}[1]{\only<1>{#1} \only<2>{\color{TextBad}#1}}
+\newcommand{\revealgoodrow}[1]{\only<1>{#1} \only<2>{\rowstyle{\color{TextGood}} #1}}
+\newcommand{\revealbadrow}[1]{\only<1>{#1} \only<2>{\rowstyle{\color{TextBad}} #1}}
 
