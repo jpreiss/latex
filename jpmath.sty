@@ -36,7 +36,6 @@
 \newcommand{\one}{\mathbf{1}}
 \newcommand{\zero}{\mathbf{0}}
 \newcommand{\I}{\mathbb{I}}  % For an indicator random variable.
-
 % Common fractions.
 \newcommand{\recip}[1]{\frac{1}{#1}}
 \newcommand{\half}{\recip{2}}
@@ -46,11 +45,12 @@
 \newcommand{\sumin}{\sum_{i=1}^n}
 \newcommand{\sumtn}{\sum_{t=1}^n}
 
-% Primitives.
+% Logic.
 \DeclareMathOperator{\suchthat}{such\ that}
 \DeclareMathOperator{\st}{s.t.}
 \DeclareMathOperator{\subjto}{subject\ to}
 \DeclareMathOperator{\otherwise}{otherwise}
+\DeclareMathOperator{\foralltext}{\text{ for all } }
 
 % Delimiters.
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
@@ -60,18 +60,27 @@
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 
 % Linear algebra and matrices.
+\newcommand{\T}{\top}
 \DeclareMathOperator{\rank}{\mathbf{rank}}
 \DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\diag}{diag}
 % TODO how to renewcommand for MathOperator
 \renewcommand{\Vec}{\mathrm{Vec}}
 \newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\bsmallmat}[1]{\begin{bsmallmatrix} #1 \end{bsmallmatrix}}
 \newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\trace}[1]{\mathrm{Tr} \hspace{-1pt} \left[ #1 \right]}
+
+% Complex numbers.
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
 
 % Calculus / analysis.
 \newcommand{\partialby}[1]{\frac{\partial}{\partial #1}}
 \newcommand{\Lip}[1]{\mathrm{Lip}(#1)}
 \renewcommand{\d}{\mathrm{d}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
 
 % Optimization.
 \DeclareMathOperator*{\argmax}{argmax\ }
@@ -95,10 +104,10 @@
 \DeclareMathOperator{\Uniform}{Uniform}
 
 % Other probability stuff.
-\newcommand{\E}{\mathbb{E}\, }
+\DeclareMathOperator*{\E}{\mathbb{E}}
 \newcommand{\iid}{\mathrm{iid}}
 \DeclareMathOperator{\Var}{Var}
-\newcommand{\Simplex}[1]{\Delta(#1)} % TODO: how to make it use \left( \right) without a preceding space?
+\newcommand{\simplex}[1]{\Delta(#1)} % TODO: how to make it use \left( \right) without a preceding space?
 \newcommand{\Indicator}[1]{\I_{#1}}
 \newcommand{\cond}{\;\middle\vert\;}
 
@@ -123,3 +132,5 @@
 \DeclareMathOperator{\clip}{clip}
 \DeclareMathOperator{\sign}{sign}
 \newcommand{\eps}{\varepsilon}
+\newcommand{\nofrac}[2]{\left. #1 \middle/ #2 \right.} % to easily switch between frac, nicefrac, and plain old num / denom
+\newcommand{\defeq}{\triangleq}  % in case we decide to use := or something
