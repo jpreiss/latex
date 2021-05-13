@@ -1,0 +1,62 @@
+\documentclass[a1,portrait]{a0poster}
+
+\usepackage{jpposter}
+
+\setlength{\paperwidth}{24in}
+\setlength{\paperheight}{36in}
+\setlength{\textwidth}{22in}
+\setlength{\textheight}{34in}
+
+\begin{document}
+
+\large
+
+
+% Header
+\begin{minipage}[c]{0.12\linewidth}
+    \includegraphics[width=\linewidth]{example-image}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.74\linewidth}
+    \centering
+    \textbf{\LARGE
+        My project
+    }\\[0.5cm]
+    \Large James A. Preiss$^1$, \; John von Neumann$^2$ \\[0.3cm]
+    \large $^1$Department of Computer Science, University of Southern California.  \; $^2$The afterlife.
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.12\linewidth}
+    \includegraphics[width=\linewidth]{example-image}
+\end{minipage}
+
+\begin{multicols}{2}
+
+\section*{Introduction}
+Hello, session attendees!
+
+\vspace{4mm}
+{\centering
+    \begin{bluebox}[Box 1 title, width=0.92\linewidth]
+        This is a colored box we can use to add structure.
+    \end{bluebox}
+}
+
+{\centering
+    \begin{orangebox}[Box 2 title, width=0.92\linewidth]
+        This is a different colored box.
+    \end{orangebox}%
+}
+
+\section*{Method}
+We apply \cite{article-full} to solve the problem.
+
+\section*{Results}
+It works.
+
+\small
+\bibliographystyle{abbrv}
+\bibliography{xampl}
+
+\end{multicols}
+\end{document}

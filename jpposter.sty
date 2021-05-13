@@ -1,0 +1,52 @@
+\usepackage{jpmath}
+\usepackage{jptext}
+
+% Poster config.
+\usepackage{multicol}
+\usepackage{multirow}
+% Amount of white space between columns.
+\columnsep=1in
+% Thickness of the black line between columns.
+\columnseprule=0pt
+
+% Use sans-serif font.
+\renewcommand{\familydefault}{\sfdefault}
+% Never indent.
+\setlength\parindent{0pt}
+
+% Define colored boxes.
+\definecolor{secgrey}{rgb}{0.32, 0.32, 0.32}
+\definecolor{boxblue}{rgb}{0.15, 0.35, 0.65}
+\definecolor{boxorange}{rgb}{0.80, 0.30, 0.0}
+\newtcolorbox{bluebox}[1][]{
+    fonttitle=\bfseries,
+    boxsep=3mm,
+    arc=4mm,
+    halign title=center,
+    colframe=boxblue,
+    colbacktitle=boxblue!70!white,
+    colback=boxblue!5!white,
+    title=#1}
+% TODO: Reduce code repetition.
+\newtcolorbox{orangebox}[1][]{
+    fonttitle=\bfseries,
+    boxsep=3mm,
+    arc=4mm,
+    halign title=center,
+    colframe=boxorange,
+    colbacktitle=boxorange!70!white,
+    colback=boxorange!5!white,
+    title=#1}
+
+% TODO: Use nicer colors?
+\newcommand{\alert}[1]{\textcolor{red}{#1}}
+\newcommand{\structure}[1]{\textcolor{boxblue}{#1}}
+
+% Set up section titles.
+\usepackage[explicit]{titlesec}
+\titleformat{name=\section,numberless}
+    {\Large \bfseries}
+    {}
+    {0em}
+    {\colorbox{secgrey}{\parbox[t][1.6cm]{\dimexpr\linewidth-2\fboxsep\relax}{\vspace{10pt}\hspace{8pt}\textcolor{white}{#1}}}}
+\titlespacing{\section}{0pt}{-0.4cm}{0.7cm} % Reduce the amount of spacing before a section.
