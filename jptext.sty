@@ -14,7 +14,6 @@
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{multicol}
-\usepackage{subcaption}
 \usepackage{tcolorbox}
 \usepackage{url}
 \usepackage{xparse}
@@ -58,5 +57,13 @@
    }
  }
 \ExplSyntaxOff
+
+
+\newcommand\inputpgf[2]{{
+	\let\pgfimageWithoutPath\pgfimage
+	\renewcommand{\pgfimage}[2][]{\pgfimageWithoutPath[##1]{#1/##2}}
+	\input{#1/#2}
+}}
+
 
 % Usage: \getenv[\HOME]{HOME}\show\HOME
