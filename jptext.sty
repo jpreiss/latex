@@ -59,11 +59,16 @@
 \ExplSyntaxOff
 
 
+% For Matplotlib's .pgf output that uses external bitmaps.
 \newcommand\inputpgf[2]{{
 	\let\pgfimageWithoutPath\pgfimage
 	\renewcommand{\pgfimage}[2][]{\pgfimageWithoutPath[##1]{#1/##2}}
 	\input{#1/#2}
 }}
 
+% Necessary for using Matplotlib's .pgf output.
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{-}
+\renewcommand{\sffamily}{}
 
 % Usage: \getenv[\HOME]{HOME}\show\HOME
