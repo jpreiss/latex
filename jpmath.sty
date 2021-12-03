@@ -1,6 +1,7 @@
 \usepackage{amsmath, amssymb}
 \usepackage{mathtools}
 \usepackage{nicefrac}
+\usepackage{physics}
 \usepackage{siunitx}
 
 % Make the penalty for breaking inline math across lines much higher.
@@ -53,23 +54,18 @@
 \DeclareMathOperator{\foralltext}{\text{ for all } }
 
 % Delimiters.
-\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
-\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 \DeclarePairedDelimiter{\inner}{\langle}{\rangle}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 
 % Linear algebra and matrices.
 \newcommand{\T}{\top}
-\DeclareMathOperator{\rank}{\mathbf{rank}}
-\DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\diag}{diag}
 % TODO how to renewcommand for MathOperator
 \renewcommand{\Vec}{\mathrm{Vec}}
 \newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 \newcommand{\bsmallmat}[1]{\begin{bsmallmatrix} #1 \end{bsmallmatrix}}
-\newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
-\newcommand{\trace}[1]{\mathrm{Tr} \hspace{-1pt} \left[ #1 \right]}
+\renewcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
 
 % Complex numbers.
 \DeclareMathOperator{\re}{Re}
