@@ -7,6 +7,9 @@
 \usepackage{jptext}
 \usepackage{xpatch}
 
+% TODO:
+% - Unified solution for all kinds of citations (no \creditline)
+
 
 %------------------%
 % Fonts and colors %
@@ -34,7 +37,7 @@
 \setbeamercolor{normal text}{fg=DarkGrey!30!Black}
 
 % Serif font everywhere.
-\usefonttheme{serif}
+\usefonttheme[stillsansseriflarge]{serif}
 
 
 %--------%
@@ -46,10 +49,10 @@
 % features of the smaller font size without raising text density.
 
 % Reduce paper size.
-\geometry{papersize={11cm,8cm}}
+\geometry{papersize={11cm,7cm}}
 
 % Reduce margins to accompany smaller paper.
-\setbeamersize{text margin left=7mm,text margin right=7mm}
+\setbeamersize{text margin left=6mm,text margin right=6mm}
 
 % Make titles stand out more with sans-serif large font.
 \setbeamerfont{frametitle}{size=\large,family=\sffamily}
@@ -59,8 +62,8 @@
 
 % Reduce the amount of space above and below display math.
 \AtBeginDocument{
-    \setlength{\abovedisplayskip}{5pt}
-    \setlength{\belowdisplayskip}{6pt}
+    \setlength{\abovedisplayskip}{6pt}
+    \setlength{\belowdisplayskip}{7pt}
 }
 
 % Increase the default spacing of tables.
@@ -103,12 +106,13 @@
 \newcommand{\colorbad}[1]{\textcolor{TextBad}{#1}}
 
 % Small grey text in lower-right corner for e.g. image credits.
-% TODO: fixed distance from slide bottom regardless of content height.
-\newcommand{\creditline}[1]{
-    \vspace{-2mm}
-    \flushright \footnotesize \note{#1}
-    \vspace{-2mm}
-}
+% TODO: No hard-coded distances.
+% TODO: Alignt right.
+%\newcommand{\creditline}[1]{
+    %\renewcommand{\thefootnote}{}
+    %\footnotetext{\sffamily \note{#1}}
+    %\renewcommand{\thefootnote}{\arabic{footnote}}
+%}
 
 % Commands to set the text color for a whole table row.
 % NOTE: requires the column type modifiers = and +.
