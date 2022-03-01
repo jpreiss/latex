@@ -1,12 +1,20 @@
-\usepackage{jpmath}
-\usepackage{jptext}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jpposter}
 
-% Poster config.
-\usepackage{multicol}
-\usepackage{multirow}
-% Amount of white space between columns.
-\columnsep=1in
-% Thickness of the black line between columns.
+\RequirePackage{jpmath}
+\RequirePackage{jptext}
+
+\RequirePackage{multicol}
+\RequirePackage{multirow}
+\RequirePackage[explicit]{titlesec}
+
+% Control amount of white space between columns.
+% TODO: Make it a key=value option.
+\columnsep=1.0in
+\DeclareOption{tighter}{\columnsep=0.5in}
+\ProcessOptions\relax
+
+% Thickness of the black line between columns - None!
 \columnseprule=0pt
 
 % Use sans-serif font.
@@ -52,7 +60,6 @@
 \newcommand{\structure}[1]{\textcolor{boxblue}{#1}}
 
 % Set up section titles.
-\usepackage[explicit]{titlesec}
 \titleformat{name=\section,numberless}
     {\Large \bfseries}
     {}

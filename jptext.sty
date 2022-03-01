@@ -1,22 +1,26 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jptext}
+
 % Non-math stuff that can be shared between article and beamer.
 % and regular articles.
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
 
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-\usepackage{booktabs}
-\usepackage{cleveref}
-\usepackage{color}
-\usepackage{comment}
-\usepackage{datetime}
-\usepackage{framed}
-\usepackage{graphicx}
-\usepackage{listings}
-\usepackage{multicol}
-\usepackage{tcolorbox}
-\usepackage{url}
-\usepackage{xparse}
+\RequirePackage{algorithm}
+\RequirePackage{algpseudocode}
+\RequirePackage{booktabs}
+\RequirePackage{cleveref}
+\RequirePackage{color}
+\RequirePackage{comment}
+\RequirePackage{datetime}
+\RequirePackage{framed}
+\RequirePackage{graphicx}
+\RequirePackage{listings}
+\RequirePackage{multicol}
+\RequirePackage{tcolorbox}
+\RequirePackage{url}
+\RequirePackage{xparse}
+\RequirePackage[utf8]{inputenc}
 
 % For documents when the particular day is not important.
 \newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
@@ -67,7 +71,6 @@
 }}
 
 % Necessary for using Matplotlib's .pgf output.
-\usepackage[utf8]{inputenc}
 \DeclareUnicodeCharacter{2212}{-}
 \renewcommand{\sffamily}{}
 

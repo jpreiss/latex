@@ -1,8 +1,12 @@
-\usepackage{amsmath, amssymb}
-\usepackage{mathtools}
-\usepackage{nicefrac}
-\usepackage{physics}
-\usepackage{siunitx}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jpmath}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+\RequirePackage{nicefrac}
+\RequirePackage{physics}
+\RequirePackage{siunitx}
 
 % Make the penalty for breaking inline math across lines much higher.
 % Override in particular equations by inserting \allowbreak.
@@ -52,6 +56,9 @@
 \DeclareMathOperator{\subjto}{subject\ to}
 \DeclareMathOperator{\otherwise}{otherwise}
 \DeclareMathOperator{\foralltext}{\text{ for all } }
+
+% Functions.
+\newcommand{\invimg}[1]{{{#1}^{-1}}}
 
 % Delimiters.
 \DeclarePairedDelimiter{\inner}{\langle}{\rangle}
