@@ -6,6 +6,7 @@
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
 
+\RequirePackage{adjustbox}
 \RequirePackage{algorithm}
 \RequirePackage{algpseudocode}
 \RequirePackage{booktabs}
@@ -15,6 +16,7 @@
 \RequirePackage{datetime}
 \RequirePackage{framed}
 \RequirePackage{graphicx}
+\RequirePackage{import}
 \RequirePackage{listings}
 \RequirePackage{multicol}
 \RequirePackage{tcolorbox}
@@ -67,7 +69,7 @@
 \newcommand\inputpgf[2]{{
 	\let\pgfimageWithoutPath\pgfimage
 	\renewcommand{\pgfimage}[2][]{\pgfimageWithoutPath[##1]{#1/##2}}
-	\input{#1/#2}
+	\subimport{#1}{#2}
 }}
 
 % Necessary for using Matplotlib's .pgf output.
