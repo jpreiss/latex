@@ -75,6 +75,13 @@
 \newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 \newcommand{\bsmallmat}[1]{\begin{bsmallmatrix} #1 \end{bsmallmatrix}}
 \renewcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\eigmax}[1]{\rho(#1)}
+
+% Linear dynamical systems.
+\newcommand{\obsbmtx}{L_o}
+\newcommand{\obsbgram}{W_o}
+\newcommand{\ctrbmtx}{L_c}
+\newcommand{\ctrbgram}{W_c}
 
 % Complex numbers.
 \DeclareMathOperator{\re}{Re}
@@ -99,6 +106,7 @@
 \DeclareMathOperator{\prox}{\mathbf{prox}}
 \newcommand{\hessian}[1]{\nabla_{\! #1\, #1}}
 \renewcommand{\gradient}[1]{\nabla_{\! #1}}  % TODO: which package defined this? it's too heavy
+\newcommand{\gradienthat}[1]{\hat{\nabla}_{\! #1}}
 
 % Geometry.
 \DeclareMathOperator{\conv}{conv}
