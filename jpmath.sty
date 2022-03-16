@@ -7,6 +7,7 @@
 \RequirePackage{nicefrac}
 \RequirePackage{physics}
 \RequirePackage{siunitx}
+\RequirePackage{mathrsfs} % mathscr font
 
 % Make the penalty for breaking inline math across lines much higher.
 % Override in particular equations by inserting \allowbreak.
@@ -54,6 +55,7 @@
 \DeclareMathOperator{\suchthat}{such\ that}
 \DeclareMathOperator{\st}{s.t.}
 \DeclareMathOperator{\subjto}{subject\ to}
+\DeclareMathOperator{\subjectto}{subject\ to}
 \DeclareMathOperator{\otherwise}{otherwise}
 \DeclareMathOperator{\foralltext}{\text{ for all } }
 
@@ -74,6 +76,14 @@
 \newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 \newcommand{\bsmallmat}[1]{\begin{bsmallmatrix} #1 \end{bsmallmatrix}}
 \renewcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\eigmax}[1]{\rho(#1)}
+\newcommand{\eigrealmax}[1]{\rho^+(#1)}
+
+% Linear dynamical systems.
+\newcommand{\obsbmtx}{L_o}
+\newcommand{\obsbgram}{W_o}
+\newcommand{\ctrbmtx}{L_c}
+\newcommand{\ctrbgram}{W_c}
 
 % Complex numbers.
 \DeclareMathOperator{\re}{Re}
@@ -96,6 +106,9 @@
 \DeclareMathOperator{\epi}{\mathbf{epi}}
 \newcommand{\subgradients}[2]{\delta #1 (#2)}
 \DeclareMathOperator{\prox}{\mathbf{prox}}
+\newcommand{\hessian}[1]{\nabla_{\! #1\, #1}}
+\renewcommand{\gradient}[1]{\nabla_{\! #1}}  % TODO: which package defined this? it's too heavy
+\newcommand{\gradienthat}[1]{\hat{\nabla}_{\! #1}}
 
 % Geometry.
 \DeclareMathOperator{\conv}{conv}
@@ -113,6 +126,8 @@
 \DeclareMathOperator{\Var}{Var}
 \newcommand{\simplex}[1]{\Delta(#1)} % TODO: how to make it use \left( \right) without a preceding space?
 \newcommand{\Indicator}[1]{\I_{#1}}
+\newcommand{\IndicatorPred}[1]{\I_{[#1]}}
+\newcommand{\IndicatorSet}[1]{\I_{\{#1\}}}
 \newcommand{\cond}{\;\middle\vert\;}
 
 % Learning stuff.
@@ -124,6 +139,7 @@
 \DeclareMathOperator{\fat}{fat}
 \DeclareMathOperator{\sfat}{sfat}
 \DeclareMathOperator{\UCB}{UCB}
+\DeclareMathOperator{\relu}{relu}
 
 % Control stuff.
 \newcommand{\Laplace}{\cL}
@@ -138,4 +154,4 @@
 \newcommand{\eps}{\varepsilon}
 \newcommand{\nofrac}[2]{\left. #1 \middle/ #2 \right.} % to easily switch between frac, nicefrac, and plain old num / denom
 \newcommand{\defeq}{\triangleq}  % in case we decide to use := or something
-\newcommand{\qeq}{\stackrel{?}{=}}  % in case we decide to use := or something
+\newcommand{\qeq}{\stackrel{?}{=}}

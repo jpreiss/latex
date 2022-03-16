@@ -2,10 +2,12 @@
 \PassOptionsToPackage{round,authoryear}{natbib}
 
 \usepackage{amsthm}
+\usepackage{thmtools, thm-restate}
 \usepackage{enumitem}  % Not compatible with Beamer.
+\usepackage{caption, subcaption}  % TODO: Can this move to jptext?
+\usepackage{wrapfig}
 
 \usepackage{hyperref} % Must go before cleveref.
-\usepackage{subfigure}
 \usepackage{jpmath}
 \usepackage{jptext}
 
@@ -21,6 +23,7 @@
 
 \theoremstyle{definition}
 \newtheorem{assumptions}[theorem]{Assumptions}
+\newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{example}[theorem]{Example}
 

@@ -6,6 +6,7 @@
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
 
+\RequirePackage{adjustbox}
 \RequirePackage{algorithm}
 \RequirePackage{algpseudocode}
 \RequirePackage{booktabs}
@@ -15,8 +16,9 @@
 \RequirePackage{datetime}
 \RequirePackage{framed}
 \RequirePackage{graphicx}
+\RequirePackage{import}
 \RequirePackage{listings}
-\RequirePackage{multicol}
+\RequirePackage{multicol, multirow}
 \RequirePackage{tcolorbox}
 \RequirePackage{url}
 \RequirePackage{xparse}
@@ -28,6 +30,11 @@
 % Draft annotation tools.
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO: #1}}}
 \newcommand{\idea}[1]{\textcolor{ProcessBlue}{\textbf{IDEA: #1}}}
+
+% Standard colors for pgfplots
+\newcommand{\plotcolora}{black}
+\newcommand{\plotcolorb}{Orange}
+\newcommand{\plotcolorc}{RoyalBlue}
 
 % Hyphenations.
 \hyphenation{Open-AI}
@@ -67,7 +74,7 @@
 \newcommand\inputpgf[2]{{
 	\let\pgfimageWithoutPath\pgfimage
 	\renewcommand{\pgfimage}[2][]{\pgfimageWithoutPath[##1]{#1/##2}}
-	\input{#1/#2}
+	\subimport{#1}{#2}
 }}
 
 % Necessary for using Matplotlib's .pgf output.
