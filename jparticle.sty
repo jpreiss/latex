@@ -1,15 +1,18 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jparticle}
+
 % TODO: does this belong here?
 \PassOptionsToPackage{round,authoryear}{natbib}
 
-\usepackage{amsthm}
-\usepackage{thmtools, thm-restate}
-\usepackage{enumitem}  % Not compatible with Beamer.
-\usepackage{caption, subcaption}  % TODO: Can this move to jptext?
-\usepackage{wrapfig}
+\RequirePackage{amsthm}
+\RequirePackage{thmtools, thm-restate}
+\RequirePackage{enumitem}  % Not compatible with Beamer.
+\RequirePackage{caption, subcaption}  % TODO: Can this move to jptext?
+\RequirePackage{wrapfig}
 
-\usepackage{hyperref} % Must go before cleveref.
-\usepackage{jpmath}
-\usepackage{jptext}
+\RequirePackage{hyperref} % Must go before cleveref.
+\RequirePackage{jpmath}
+\RequirePackage{jptext}
 
 
 % Theorem counters.
