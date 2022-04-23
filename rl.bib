@@ -703,3 +703,80 @@ Eprint = {arXiv:1807.02264},
   year={2019},
   organization={IEEE}
 }
+
+@inproceedings{wierstra-recurrent-policy-gradient,
+  title={Solving deep memory POMDPs with recurrent policy gradients},
+  author={Wierstra, Daan and Foerster, Alexander and Peters, Jan and Schmidhuber, Juergen},
+  booktitle={International conference on artificial neural networks},
+  pages={697--706},
+  year={2007},
+  organization={Springer}
+}
+
+@article{peshkin2001learning,
+  title={Learning policies with external memory},
+  author={Peshkin, Leonid and Meuleau, Nicolas and Kaelbling, Leslie},
+  journal={arXiv preprint cs/0103003},
+  year={2001}
+}
+
+@article{akkaya2019rubiks,
+  title={Solving rubik's cube with a robot hand},
+  author={Akkaya, Ilge and Andrychowicz, Marcin and Chociej, Maciek and Litwin, Mateusz and McGrew, Bob and Petron, Arthur and Paino, Alex and Plappert, Matthias and Powell, Glenn and Ribas, Raphael and others},
+  journal={arXiv preprint arXiv:1910.07113},
+  year={2019}
+}
+
+@article{hwangbo2017quadrotor,
+  title={Control of a quadrotor with reinforcement learning},
+  author={Hwangbo, Jemin and Sa, Inkyu and Siegwart, Roland and Hutter, Marco},
+  journal={IEEE Robotics and Automation Letters},
+  volume={2},
+  number={4},
+  pages={2096--2103},
+  year={2017},
+  publisher={IEEE}
+}
+
+@InProceedings{chebotar-pilqr,
+  title = 	 {Combining Model-Based and Model-Free Updates for Trajectory-Centric Reinforcement Learning},
+  author =       {Yevgen Chebotar and Karol Hausman and Marvin Zhang and Gaurav Sukhatme and Stefan Schaal and Sergey Levine},
+  booktitle = 	 {Proceedings of the 34th International Conference on Machine Learning},
+  pages = 	 {703--711},
+  year = 	 {2017},
+  editor = 	 {Precup, Doina and Teh, Yee Whye},
+  volume = 	 {70},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {06--11 Aug},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v70/chebotar17a/chebotar17a.pdf},
+  url = 	 {https://proceedings.mlr.press/v70/chebotar17a.html},
+  abstract = 	 {Reinforcement learning algorithms for real-world robotic applications must be able to handle complex, unknown dynamical systems while maintaining data-efficient learning. These requirements are handled well by model-free and model-based RL approaches, respectively. In this work, we aim to combine the advantages of these approaches. By focusing on time-varying linear-Gaussian policies, we enable a model-based algorithm based on the linear-quadratic regulator that can be integrated into the model-free framework of path integral policy improvement. We can further combine our method with guided policy search to train arbitrary parameterized policies such as deep neural networks. Our simulation and real-world experiments demonstrate that this method can solve challenging manipulation tasks with comparable or better performance than model-free methods while maintaining the sample efficiency of model-based methods.}
+}
+
+@article{levine-visuomotor,
+author = {Levine, Sergey and Finn, Chelsea and Darrell, Trevor and Abbeel, Pieter},
+title = {End-to-End Training of Deep Visuomotor Policies},
+year = {2016},
+issue_date = {January 2016},
+publisher = {JMLR.org},
+volume = {17},
+number = {1},
+issn = {1532-4435},
+abstract = {Policy search methods can allow robots to learn control policies for a wide range of tasks, but practical applications of policy search often require hand-engineered components for perception, state estimation, and low-level control. In this paper, we aim to answer the following question: does training the perception and control systems jointly end-to-end provide better performance than training each component separately? To this end, we develop a method that can be used to learn policies that map raw image observations directly to torques at the robot's motors. The policies are represented by deep convolutional neural networks (CNNs) with 92,000 parameters, and are trained using a guided policy search method, which transforms policy search into supervised learning, with supervision provided by a simple trajectory-centric reinforcement learning method. We evaluate our method on a range of real-world manipulation tasks that require close coordination between vision and control, such as screwing a cap onto a bottle, and present simulated comparisons to a range of prior policy search methods.},
+journal = {J. Mach. Learn. Res.},
+month = {jan},
+pages = {1334–1373},
+numpages = {40},
+keywords = {reinforcement learning, neural networks, optimal control, vision}
+}
+
+@inproceedings{deisenroth-pilco,
+  author    = {Marc Peter Deisenroth and
+               Carl Edward Rasmussen},
+  title     = {{PILCO:} {A} Model-Based and Data-Efficient Approach to Policy Search},
+  booktitle = {{ICML}},
+  pages     = {465--472},
+  publisher = {Omnipress},
+  year      = {2011}
+}

@@ -304,6 +304,21 @@ title = {On the Sample Complexity of Reinforcement Learning}
  year = {2019}
 }
 
+@InProceedings{simchowitz2020icml,
+  title = 	 {Naive Exploration is Optimal for Online {LQR}},
+  author =       {Simchowitz, Max and Foster, Dylan},
+  booktitle = 	 {Proceedings of the 37th International Conference on Machine Learning},
+  pages = 	 {8937--8948},
+  year = 	 {2020},
+  editor = 	 {III, Hal Daumé and Singh, Aarti},
+  volume = 	 {119},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {13--18 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v119/simchowitz20a/simchowitz20a.pdf},
+  url = 	 {https://proceedings.mlr.press/v119/simchowitz20a.html},
+  abstract = 	 {We consider the problem of online adaptive control of the linear quadratic regulator, where the true system parameters are unknown. We prove new upper and lower bounds demonstrating that the optimal regret scales as $\tilde{\Theta} (\sqrt{d_{\mathbf{u}}^2 d_{\mathbf{x}} T})$, where $T$ is the number of time steps, $d_{\mathbf{u}}$ is the dimension of the input space, and $d_{\mathbf{x}}$ is the dimension of the system state. Notably, our lower bounds rule out the possibility of a $\mathrm{poly}(\log{T})$-regret algorithm, which had been conjectured due to the apparent strong convexity of the problem. Our upper bound is attained by a simple variant of certainty equivalent control, where the learner selects control inputs according to the optimal controller for their estimate of the system while injecting exploratory random noise. While this approach was shown to achieve $\sqrt{T}$ regret by Mania et al. (2019), we show that if the learner continually refines their estimates of the system matrices, the method attains optimal dimension dependence as well. Central to our upper and lower bounds is a new approach for controlling perturbations of Riccati equations called the self-bounding ODE method, which we use to derive suboptimality bounds for the certainty equivalent controller synthesized from estimated system dynamics. This in turn enables regret upper bounds which hold for any stabilizable instance and scale with natural control-theoretic quantities.}
+}
 
 @article{cohen-lqr-efficient,
   author    = {Alon Cohen and
