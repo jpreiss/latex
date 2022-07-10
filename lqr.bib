@@ -1,7 +1,7 @@
 @InProceedings{fazel-global-lqr,
   title = 	 {Global Convergence of Policy Gradient Methods for the Linear Quadratic Regulator},
   author =       {Fazel, Maryam and Ge, Rong and Kakade, Sham and Mesbahi, Mehran},
-  booktitle = 	 {Proceedings of the 35th International Conference on Machine Learning},
+  booktitle = 	 {\ICML},
   pages = 	 {1467--1476},
   year = 	 {2018},
   volume = 	 {80},
@@ -17,7 +17,7 @@
                Mihailo R. Jovanovic},
   title     = {Global exponential convergence of gradient methods over the nonconvex
                landscape of the linear quadratic regulator},
-  booktitle = {{CDC}},
+  booktitle = {\CDC},
   pages     = {7474--7479},
   publisher = {{IEEE}},
   year      = {2019}
@@ -39,7 +39,7 @@
   author    = {Yasin Abbasi{-}Yadkori and
                Csaba Szepesv{\'{a}}ri},
   title     = {Regret Bounds for the Adaptive Control of Linear Quadratic Systems},
-  booktitle = {{COLT}},
+  booktitle = {\COLT},
   series    = {{JMLR} Proceedings},
   volume    = {19},
   pages     = {1--26},
@@ -123,7 +123,7 @@ doi = {10.1109/ACC.1994.735224}
                Yishay Mansour and
                Kunal Talwar},
   title     = {Online Linear Quadratic Control},
-  booktitle = {{ICML}},
+  booktitle = {\ICML},
   series    = {Proceedings of Machine Learning Research},
   volume    = {80},
   pages     = {1028--1037},
@@ -139,7 +139,7 @@ doi = {10.1109/ACC.1994.735224}
                Stephen Tu},
   title     = {Regret Bounds for Robust Adaptive Control of the Linear Quadratic
                Regulator},
-  booktitle = {NeurIPS},
+  booktitle = {\NeurIPS},
   pages     = {4192--4201},
   year      = {2018}
 }
@@ -213,7 +213,7 @@ doi = {10.1109/ACC.1994.735224}
 @inproceedings{DBLP:conf/nips/Kobilarov15,
   author    = {Marin Kobilarov},
   title     = {Sample Complexity Bounds for Iterative Stochastic Policy Optimization},
-  booktitle = {{NIPS}},
+  booktitle = {Advances in Neural Information Processing Systems},
   pages     = {3114--3122},
   year      = {2015}
 }
@@ -280,7 +280,7 @@ title = {On the Sample Complexity of Reinforcement Learning}
                Benjamin Recht},
   title     = {The Gap Between Model-Based and Model-Free Methods on the Linear Quadratic
                Regulator: An Asymptotic Viewpoint},
-  booktitle = {{COLT}},
+  booktitle = {\COLT},
   series    = {Proceedings of Machine Learning Research},
   volume    = {99},
   pages     = {3036--3083},
@@ -297,8 +297,8 @@ title = {On the Sample Complexity of Reinforcement Learning}
 
 @inproceedings{mania2019neurips,
  author = {Mania, Horia and Tu, Stephen and Recht, Benjamin},
- booktitle = {Advances in Neural Information Processing Systems},
- pages = {},
+ booktitle = {\NeurIPS},
+ pages = {10154--10164},
  title = {Certainty Equivalence is Efficient for Linear Quadratic Control},
  volume = {32},
  year = {2019}
@@ -307,7 +307,7 @@ title = {On the Sample Complexity of Reinforcement Learning}
 @InProceedings{simchowitz2020icml,
   title = 	 {Naive Exploration is Optimal for Online {LQR}},
   author =       {Simchowitz, Max and Foster, Dylan},
-  booktitle = 	 {Proceedings of the 37th International Conference on Machine Learning},
+  booktitle = 	 {\ICML},
   pages = 	 {8937--8948},
   year = 	 {2020},
   editor = 	 {III, Hal Daumé and Singh, Aarti},
@@ -317,7 +317,6 @@ title = {On the Sample Complexity of Reinforcement Learning}
   publisher =    {PMLR},
   pdf = 	 {http://proceedings.mlr.press/v119/simchowitz20a/simchowitz20a.pdf},
   url = 	 {https://proceedings.mlr.press/v119/simchowitz20a.html},
-  abstract = 	 {We consider the problem of online adaptive control of the linear quadratic regulator, where the true system parameters are unknown. We prove new upper and lower bounds demonstrating that the optimal regret scales as $\tilde{\Theta} (\sqrt{d_{\mathbf{u}}^2 d_{\mathbf{x}} T})$, where $T$ is the number of time steps, $d_{\mathbf{u}}$ is the dimension of the input space, and $d_{\mathbf{x}}$ is the dimension of the system state. Notably, our lower bounds rule out the possibility of a $\mathrm{poly}(\log{T})$-regret algorithm, which had been conjectured due to the apparent strong convexity of the problem. Our upper bound is attained by a simple variant of certainty equivalent control, where the learner selects control inputs according to the optimal controller for their estimate of the system while injecting exploratory random noise. While this approach was shown to achieve $\sqrt{T}$ regret by Mania et al. (2019), we show that if the learner continually refines their estimates of the system matrices, the method attains optimal dimension dependence as well. Central to our upper and lower bounds is a new approach for controlling perturbations of Riccati equations called the self-bounding ODE method, which we use to derive suboptimality bounds for the certainty equivalent controller synthesized from estimated system dynamics. This in turn enables regret upper bounds which hold for any stabilizable instance and scale with natural control-theoretic quantities.}
 }
 
 @article{cohen-lqr-efficient,
@@ -330,7 +329,7 @@ title = {On the Sample Complexity of Reinforcement Learning}
   year      = {2019}
 }
 
-@article{DBLP:journals/corr/abs-1907-08921,
+@article{bu2019firstorder,
   author    = {Jingjing Bu and
                Afshin Mesbahi and
                Maryam Fazel and
@@ -360,18 +359,6 @@ title = {On the Sample Complexity of Reinforcement Learning}
   title     = {Robust exploration in linear quadratic reinforcement learning},
   booktitle = {NeurIPS},
   pages     = {15310--15320},
-  year      = {2019}
-}
-
-@article{agarwal-optimality-approximation-policygradient,
-  author    = {Alekh Agarwal and
-               Sham M. Kakade and
-               Jason D. Lee and
-               Gaurav Mahajan},
-  title     = {Optimality and Approximation with Policy Gradient Methods in Markov
-               Decision Processes},
-  journal   = {CoRR},
-  volume    = {abs/1908.00261},
   year      = {2019}
 }
 
@@ -534,7 +521,7 @@ title = {On the Sample Complexity of Reinforcement Learning}
 }
 
 @article{safonov-lqr-margin,
-  title={Gain and phase margin for multiloop LQG regulators},
+  title={Gain and phase margin for multiloop {LQG} regulators},
   author={Safonov, Michael and Athans, Michael},
   journal={IEEE Transactions on Automatic Control},
   volume={22},
@@ -545,9 +532,9 @@ title = {On the Sample Complexity of Reinforcement Learning}
 }
 
 @article{doyle-lqg,
-  title={Guaranteed margins for LQG regulators},
+  title={Guaranteed margins for {LQG} regulators},
   author={Doyle, John C},
-  journal={IEEE Transactions on automatic Control},
+  journal={IEEE Transactions on Automatic Control},
   volume={23},
   number={4},
   pages={756--757},
@@ -599,7 +586,7 @@ title = {On the Sample Complexity of Reinforcement Learning}
 }
 
 @article{sun1998perturbation,
-  title={Perturbation theory for algebraic Riccati equations},
+  title={Perturbation theory for algebraic {Riccati} equations},
   author={Sun, Ji-Guang},
   journal={SIAM Journal on Matrix Analysis and Applications},
   volume={19},
@@ -610,7 +597,7 @@ title = {On the Sample Complexity of Reinforcement Learning}
 }
 
 @article{karanam-riccati-bounds,
-  title={Eigenvalue bounds for algebraic Riccati and Lyapunov equations},
+  title={Eigenvalue bounds for algebraic {Riccati} and {Lyapunov} equations},
   author={Karanam, V},
   journal={IEEE Transactions on Automatic Control},
   volume={27},
@@ -623,7 +610,7 @@ title = {On the Sample Complexity of Reinforcement Learning}
 @article{wang-trace-bounds-riccati,
   author={Sheng-De Wang and Te-Son Kuo and Chen-Fa Hsu},
   journal={IEEE Transactions on Automatic Control},
-  title={Trace bounds on the solution of the algebraic matrix Riccati and Lyapunov equation},
+  title={Trace bounds on the solution of the algebraic matrix {Riccati} and {Lyapunov} equation},
   year={1986},
   volume={31},
   number={7},
@@ -638,10 +625,10 @@ title = {On the Sample Complexity of Reinforcement Learning}
 }
 
 @book{astrom-feedback-introduction,
-  title={Feedback systems: an introduction for scientists and engineers},
+  title={Feedback systems: An introduction for scientists and engineers},
   author={{\AA}str{\"o}m, Karl Johan and Murray, Richard M},
   year={2010},
-  publisher={Princeton university press}
+  publisher={Princeton University Press}
 }
 
 @book{astrom-adaptive,
@@ -763,7 +750,7 @@ title = {On the Sample Complexity of Reinforcement Learning}
 @inproceedings{tan-selecting,
   title={Operating point selection in multimodel controller design},
   author={Tan, Wen and Marquez, Horacio J. and Chen, Tongwen},
-  booktitle={Proceedings of the 2004 American Control Conference},
+  booktitle={American Control Conference},
   volume={4},
   pages={3652--3657},
   year={2004},
@@ -824,7 +811,7 @@ title = {On the Sample Complexity of Reinforcement Learning}
 }
 
 @article{anderson-coverings,
-  title={Multiple model adaptive control. Part 1: Finite controller coverings},
+  title={Multiple model adaptive control. {Part} 1: Finite controller coverings},
   author={Anderson, Brian D. O. and Brinsmead, Thomas S. and De Bruyne, Franky and Hespanha, Joao and Liberzon, Daniel and Morse, A. Stephen},
   journal={International Journal of Robust and Nonlinear Control},
   volume={10},
@@ -848,7 +835,7 @@ title = {On the Sample Complexity of Reinforcement Learning}
 @inproceedings{fu-minimum-switching,
   title={Minimum switching control for adaptive tracking},
   author={Fu, Minyue},
-  booktitle={Proceedings of 35th IEEE Conference on Decision and Control},
+  booktitle={\CDC},
   volume={4},
   pages={3749--3754},
   year={1996},
@@ -866,7 +853,7 @@ title = {On the Sample Complexity of Reinforcement Learning}
 }
 
 @article{kwon-riccati-bound-survey,
-  title={Bounds in algebraic Riccati and Lyapunov equations: a survey and some new results},
+  title={Bounds in algebraic {Riccati} and {Lyapunov} equations: A survey and some new results},
   author={Kwon, Wook Hyun and Moon, Young Soo and Ahn, Sang Chul},
   journal={International Journal of Control},
   volume={64},
@@ -944,7 +931,7 @@ title = {On the Sample Complexity of Reinforcement Learning}
                Afshin Mesbahi and
                Mehran Mesbahi},
   title     = {On Topological and Metrical Properties of Stabilizing Feedback Gains:
-               the {MIMO} Case},
+               The {MIMO} Case},
   journal   = {CoRR},
   volume    = {abs/1904.02737},
   year      = {2019}
@@ -963,13 +950,13 @@ title = {On the Sample Complexity of Reinforcement Learning}
 @InProceedings{simchowitz2020colt,
   title = 	 {Improper Learning for Non-Stochastic Control},
   author =       {Simchowitz, Max and Singh, Karan and Hazan, Elad},
-  booktitle = 	 {Proceedings of Thirty Third Conference on Learning Theory},
+  booktitle = 	 {\COLT},
   pages = 	 {3320--3436},
   year = 	 {2020},
   volume = 	 {125},
   series = 	 {Proceedings of Machine Learning Research},
   month = 	 {09--12 Jul},
-  publisher =    {PMLR},
+  publisher =    {PMLR}
 }
 
 @misc{sperry-autopilot,
@@ -977,5 +964,42 @@ title = {On the Sample Complexity of Reinforcement Learning}
   author={Sperry, Elmer A},
   howpublished={US Patent US1368226A},
   month = {Feb.},
-  year = {1921},
+  year = {1921}
 }
+
+@INPROCEEDINGS{yue2021cdc,
+  author={Sun, Yue and Fazel, Maryam},
+  booktitle={\CDC}, 
+  title={Learning Optimal Controllers by Policy Gradient: Global Optimality via Convex Parameterization}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={4576-4581},
+  doi={10.1109/CDC45484.2021.9682821}}
+}
+
+
+@InProceedings{cassel2021icml,
+  title = 	 {Online Policy Gradient for Model Free Learning of Linear Quadratic Regulators with $\sqrt{T}$ Regret},
+  author =       {Cassel, Asaf B and Koren, Tomer},
+  booktitle = 	 {\ICML},
+  pages = 	 {1304--1313},
+  year = 	 {2021},
+  editor = 	 {Meila, Marina and Zhang, Tong},
+  volume = 	 {139},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {18--24 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v139/cassel21a/cassel21a.pdf},
+  url = 	 {https://proceedings.mlr.press/v139/cassel21a.html},
+}
+
+@inproceedings{hespanha2000bounds,
+  title={Bounds on the number of switchings with scale-independent hysteresis: Applications to supervisory control},
+  author={Hespanha, Jo{\~a}o P and Liberzon, Daniel and Morse, A Stephen},
+  booktitle={\CDC},
+  volume={4},
+  pages={3622--3627},
+  year={2000},
+}
+

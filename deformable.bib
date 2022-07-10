@@ -4,59 +4,87 @@
 	volume = {6},
 	issn = {2377-3766},
 	doi = {10.1109/LRA.2021.3066969},
-	abstract = {Due to their complex dynamics and high-dimensional configuration spaces, non-rigid objects such as cables, garments, bedding and various food items remain notoriously challenging for robots to manipulate effectively. In this letter, we therefore develop, validate and analyze model-based optimal control techniques for dynamic manipulation of deformable objects. We study, in particular, the application of both the batch Newton method and the stagewise Differential Dynamic Programming (DDP) approach to this challenging problem domain. On a technical level, we derive analytic formulations for all necessary derivatives, noting that numerically stable simulation of deformable objects demands implicit integration schemes, which do not have closed form solutions. While both DDP and Newton's method converge quadratically, our experiments and analysis show that the relative overall performance of these two approaches depends heavily on the dimensions of the control problems being solved. We demonstrate the efficacy of our trajectory optimization formulations through a variety of simulation and real-world experiments.},
 	number = {2},
-	journal = {IEEE Robotics and Automation Letters},
+	journal = {\RAL},
 	author = {Zimmermann, Simon and Poranne, Roi and Coros, Stelian},
 	month = apr,
 	year = {2021},
-	note = {Conference Name: IEEE Robotics and Automation Letters},
-	keywords = {Deformable models, Finite element analysis, Manipulator dynamics, Motion planning, Newton method, Numerical models, Robots, trajectory optimization, Trajectory optimization},
 	pages = {4209--4216},
-	file = {IEEE Xplore Abstract Record:/home/drm/Zotero/storage/3TP8KKLX/9380919.html:text/html},
 }
 
-@article{hu_chainqueen_2019,
-	title = {{ChainQueen}: A Real-Time Differentiable Physical Simulator for Soft Robotics},
-	journal = {Proceedings of IEEE International Conference on Robotics and Automation (ICRA)},
-	author = {Hu, Yuanming and Liu, Jiancheng and Spielberg, Andrew and Tenenbaum, Joshua B and Freeman, William T and Wu, Jiajun and Rus, Daniela and Matusik, Wojciech},
-	year = {2019},
+@inproceedings{hu_chainqueen_2019,
+  author    = {Yuanming Hu and
+               Jiancheng Liu and
+               Andrew Spielberg and
+               Joshua B. Tenenbaum and
+               William T. Freeman and
+               Jiajun Wu and
+               Daniela Rus and
+               Wojciech Matusik},
+  title     = {{ChainQueen}: {A} Real-Time Differentiable Physical Simulator for Soft
+               Robotics},
+  booktitle = {\ICRA},
+  pages     = {6265--6271},
+  publisher = {{IEEE}},
+  year      = {2019},
+  url       = {https://doi.org/10.1109/ICRA.2019.8794333},
+  doi       = {10.1109/ICRA.2019.8794333},
 }
 
-@article{heiden_disect_2021,
-	title = {{DiSECt}: A Differentiable Simulation Engine for Autonomous Robotic Cutting},
-	shorttitle = {{DiSECt}},
-	journal = {arXiv preprint arXiv:2105.12244},
-	author = {Heiden, Eric and Macklin, Miles and Narang, Yashraj and Fox, Dieter and Garg, Animesh and Ramos, Fabio},
-	year = {2021},
-	file = {Full Text:/home/drm/Zotero/storage/CME9KINF/Heiden et al. - 2021 - DiSECt A Differentiable Simulation Engine for Aut.pdf:application/pdf;Snapshot:/home/drm/Zotero/storage/78ZE27MZ/2105.html:text/html},
+@inproceedings{heiden_disect_2021,
+  author    = {Eric Heiden and
+               Miles Macklin and
+               Yashraj S. Narang and
+               Dieter Fox and
+               Animesh Garg and
+               Fabio Ramos},
+  editor    = {Dylan A. Shell and
+               Marc Toussaint and
+               M. Ani Hsieh},
+  title     = {{DiSECt}: {A} Differentiable Simulation Engine for Autonomous Robotic
+               Cutting},
+  booktitle = {\RSS},
+  year      = {2021},
+  url       = {https://doi.org/10.15607/RSS.2021.XVII.067},
+  doi       = {10.15607/RSS.2021.XVII.067},
 }
 
 @inproceedings{macklin_xpbd_2016,
-	title = {{XPBD}: position-based simulation of compliant constrained dynamics},
-	shorttitle = {{XPBD}},
-	booktitle = {Proceedings of the 9th International Conference on Motion in Games},
+	title = {{XPBD}: Position-based simulation of compliant constrained dynamics},
+	booktitle = {International Conference on Motion in Games},
 	author = {Macklin, Miles and Müller, Matthias and Chentanez, Nuttapong},
 	year = {2016},
 	pages = {49--54},
-	file = {Full Text:/home/drm/Zotero/storage/SGIU8I3R/Macklin et al. - 2016 - XPBD position-based simulation of compliant const.pdf:application/pdf;Snapshot:/home/drm/Zotero/storage/CSD3C8PC/2994258.html:text/html},
 }
 
-@article{qiao_scalable_2020,
-	title = {Scalable differentiable physics for learning and control},
-	journal = {arXiv preprint arXiv:2007.02168},
-	author = {Qiao, Yi-Ling and Liang, Junbang and Koltun, Vladlen and Lin, Ming C.},
-	year = {2020},
-	file = {Full Text:/home/drm/Zotero/storage/632HNUFI/Qiao et al. - 2020 - Scalable differentiable physics for learning and c.pdf:application/pdf;Snapshot:/home/drm/Zotero/storage/62B6LQJD/2007.html:text/html},
+@inproceedings{qiao_scalable_2020,
+  author    = {Yi{-}Ling Qiao and
+               Junbang Liang and
+               Vladlen Koltun and
+               Ming C. Lin},
+  title     = {Scalable Differentiable Physics for Learning and Control},
+  booktitle = {\ICML},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {119},
+  pages     = {7847--7856},
+  publisher = {{PMLR}},
+  year      = {2020},
+  url       = {http://proceedings.mlr.press/v119/qiao20a.html},
 }
 
 @article{li_diffcloth_2021,
-	title = {{DiffCloth}: Differentiable Cloth Simulation with Dry Frictional Contact},
-	shorttitle = {{DiffCloth}},
-	journal = {arXiv preprint arXiv:2106.05306},
-	author = {Li, Yifei and Du, Tao and Wu, Kui and Xu, Jie and Matusik, Wojciech},
-	year = {2021},
-	file = {Full Text:/home/drm/Zotero/storage/WK8UCYF7/Li et al. - 2021 - DiffCloth Differentiable Cloth Simulation with Dr.pdf:application/pdf;Snapshot:/home/drm/Zotero/storage/44CRRAKX/2106.html:text/html},
+  author    = {Yifei Li and
+               Tao Du and
+               Kui Wu and
+               Jie Xu and
+               Wojciech Matusik},
+  title     = {{DiffCloth}: Differentiable Cloth Simulation with Dry Frictional Contact},
+  journal   = {CoRR},
+  volume    = {abs/2106.05306},
+  year      = {2021},
+  url       = {https://arxiv.org/abs/2106.05306},
+  eprinttype = {arXiv},
+  eprint    = {2106.05306},
 }
 
 @article{arriola-rios_modeling_2020,
@@ -66,7 +94,6 @@
 	shorttitle = {Modeling of Deformable Objects for Robotic Manipulation},
 	url = {https://www.frontiersin.org/article/10.3389/frobt.2020.00082},
 	doi = {10.3389/frobt.2020.00082},
-	abstract = {Manipulation of deformable objects has given rise to an important set of open problems in the field of robotics. Application areas include robotic surgery, household robotics, manufacturing, logistics, and agriculture, to name a few. Related research problems span modeling and estimation of an object's shape, estimation of an object's material properties, such as elasticity and plasticity, object tracking and state estimation during manipulation, and manipulation planning and control. In this survey article, we start by providing a tutorial on foundational aspects of models of shape and shape dynamics. We then use this as the basis for a review of existing work on learning and estimation of these models and on motion planning and control to achieve desired deformations. We also discuss potential future lines of work.},
 	urldate = {2021-09-14},
 	journal = {Frontiers in Robotics and AI},
 	author = {Arriola-Rios, Veronica E. and Guler, Puren and Ficuciello, Fanny and Kragic, Danica and Siciliano, Bruno and Wyatt, Jeremy L.},
@@ -77,11 +104,9 @@
 
 @inproceedings{bern_trajectory_2019,
 	title = {Trajectory Optimization for Cable-Driven Soft Robot Locomotion.},
-	volume = {1},
-	booktitle = {Robotics: Science and Systems},
+	booktitle = {\RSS},
 	author = {Bern, James M and Banzet, Pol and Poranne, Roi and Coros, Stelian},
 	year = {2019},
-	note = {Issue: 3},
 }
 
 @article{hahn_real2sim_2019,
@@ -91,7 +116,6 @@
 	journal = {ACM Transactions on Graphics (TOG)},
 	author = {Hahn, David and Banzet, Pol and Bern, James M and Coros, Stelian},
 	year = {2019},
-	note = {Publisher: ACM New York, NY, USA},
 	pages = {1--13},
 }
 
@@ -99,10 +123,9 @@
 	title = {Control design for soft robots based on reduced-order model},
 	volume = {4},
 	number = {1},
-	journal = {IEEE Robotics and Automation Letters},
+	journal = {\RAL},
 	author = {Thieffry, Maxime and Kruszewski, Alexandre and Duriez, Christian and Guerra, Thierry-Marie},
 	year = {2018},
-	note = {Publisher: IEEE},
 	pages = {25--32},
 }
 
@@ -111,16 +134,12 @@
 	volume = {15},
 	issn = {1558-3783},
 	doi = {10.1109/TASE.2018.2822669},
-	abstract = {We present a novel approach to deformable object manipulation that does not rely on highly accurate modeling. The key contribution of this paper is to formulate the task as a multiarmed bandit problem, with each arm representing a model of the deformable object. To “pull” an arm and evaluate its utility, we use the arm's model to generate a velocity command for the gripper(s) holding the object and execute it. As the task proceeds and the object deforms, the utility of each model can change. Our framework estimates these changes and balances the exploration of the model set with exploitation of high-utility models. We also propose an approach based on Kalman filtering for nonstationary multiarmed normal bandits to leverage the coupling between the models to learn more from each arm pull. We demonstrate that our method outperforms previous methods on synthetic trials and performs competitively on several manipulation tasks in simulation.},
 	number = {3},
 	journal = {IEEE Transactions on Automation Science and Engineering},
 	author = {Mcconachie, Dale and Berenson, Dmitry},
 	month = jul,
 	year = {2018},
-	note = {Conference Name: IEEE Transactions on Automation Science and Engineering},
-	keywords = {Computational modeling, Data models, Deformable models, Deformable objects, Jacobian matrices, manipulation, robot learning, Robots, Task analysis, Training},
 	pages = {967--979},
-	file = {IEEE Xplore Abstract Record:/home/drm/Zotero/storage/7XDE4AUC/8345172.html:text/html},
 }
 
 @article{mcconachie_manipulating_2020,
@@ -129,41 +148,43 @@
 	issn = {0278-3649},
 	url = {https://doi.org/10.1177/0278364920918299},
 	doi = {10.1177/0278364920918299},
-	abstract = {We present a framework for deformable object manipulation that interleaves planning and control, enabling complex manipulation tasks without relying on high-fidelity modeling or simulation. The key question we address is when should we use planning and when should we use control to achieve the task? Planners are designed to find paths through complex configuration spaces, but for highly underactuated systems, such as deformable objects, achieving a specific configuration is very difficult even with high-fidelity models. Conversely, controllers can be designed to achieve specific configurations, but they can be trapped in undesirable local minima owing to obstacles. Our approach consists of three components: (1) a global motion planner to generate gross motion of the deformable object; (2) a local controller for refinement of the configuration of the deformable object; and (3) a novel deadlock prediction algorithm to determine when to use planning versus control. By separating planning from control we are able to use different representations of the deformable object, reducing overall complexity and enabling efficient computation of motion. We provide a detailed proof of probabilistic completeness for our planner, which is valid despite the fact that our system is underactuated and we do not have a steering function. We then demonstrate that our framework is able to successfully perform several manipulation tasks with rope and cloth in simulation, which cannot be performed using either our controller or planner alone. These experiments suggest that our planner can generate paths efficiently, taking under a second on average to find a feasible path in three out of four scenarios. We also show that our framework is effective on a 16-degree-of-freedom physical robot, where reachability and dual-arm constraints make the planning more difficult.},
-	language = {en},
 	number = {8},
 	urldate = {2021-09-14},
 	journal = {The International Journal of Robotics Research},
 	author = {McConachie, Dale and Dobson, Andrew and Ruan, Mengyao and Berenson, Dmitry},
 	month = jul,
 	year = {2020},
-	note = {Publisher: SAGE Publications Ltd STM},
 	keywords = {compliant motion planning, deformable object manipulation, Deformable objects, motion planning, planning and control},
 	pages = {957--982},
-	file = {SAGE PDF Full Text:/home/drm/Zotero/storage/SRJMPXTX/McConachie et al. - 2020 - Manipulating deformable objects by interleaving pr.pdf:application/pdf},
 }
 
 @inproceedings{duenser_interactive_2018,
 	title = {Interactive robotic manipulation of elastic objects},
-	booktitle = {2018 {IEEE}/{RSJ} International Conference on Intelligent Robots and Systems ({IROS})},
+	booktitle = {\IROS},
 	publisher = {IEEE},
 	author = {Duenser, Simon and Bern, James M and Poranne, Roi and Coros, Stelian},
 	year = {2018},
 	pages = {3476--3481},
 }
 
-@article{tonkens_soft_2020,
-	title = {Soft robot optimal control via reduced order finite element models},
-	journal = {arXiv preprint arXiv:2011.02092},
-	author = {Tonkens, Sander and Lorenzetti, Joseph and Pavone, Marco},
-	year = {2020},
+@inproceedings{tonkens_soft_2020,
+  author    = {Sander Tonkens and
+               Joseph Lorenzetti and
+               Marco Pavone},
+  title     = {Soft Robot Optimal Control Via Reduced Order Finite Element Models},
+  booktitle = {\ICRA},
+  pages     = {12010--12016},
+  publisher = {{IEEE}},
+  year      = {2021},
+  url       = {https://doi.org/10.1109/ICRA48506.2021.9560999},
+  doi       = {10.1109/ICRA48506.2021.9560999},
 }
 
 @inproceedings{bern_soft_2020,
 	title = {Soft Robot Control With a Learned Differentiable Model},
 	doi = {10.1109/RoboSoft48309.2020.9116011},
 	abstract = {Soft robots are inherently safe and comply readily to their environment. They are therefore exciting for applications like search and rescue or medicine, which involve a high degree of uncertainty, and require interacting with humans. However, the best way to model and control soft robots largely remains an open question. One promising approach is to leverage physically-based modeling techniques such as the finite element method. However, such techniques are inherently limited by their physical assumptions. Indeed, real-world soft robots are often made from unpredictable materials, using imprecise techniques. Data-driven approaches provide an exciting alternative, as they can learn real-world fabrication defects and asymmetries. In this paper we present our first investigation into using machine learning to do soft robot control. We learn a differentiable model of a soft robot's quasi-static physics, and then perform gradient-based optimization to find optimal open-loop control inputs. We find that our learned model captures phenomena that would be absent from an idealized physically-based simulation. We also present practical techniques for acquiring high-quality motion capture data, and observations the effect of network complexity on model accuracy.},
-	booktitle = {2020 3rd {IEEE} International Conference on Soft Robotics ({RoboSoft})},
+	booktitle = {International Conference on Soft Robotics ({RoboSoft})},
 	author = {Bern, James M. and Schnider, Yannick and Banzet, Pol and Kumar, Nitish and Coros, Stelian},
 	month = may,
 	year = {2020},
@@ -175,8 +196,7 @@
 @inproceedings{mirza_machine_2020,
 	title = {Machine Learning and Soft Robotics},
 	doi = {10.1109/ACIT50332.2020.9300102},
-	abstract = {In recent times, robotics and especially soft robotics has attracted a wide range of researchers and scientists. As oft robotics has an extensive number of advantages in the real environment, due to their less complex system and cost. Soft grippers are more adaptive as compared to the rigid robotic grippers. The grasping performance of soft robots can be improved without bringing major changes in the control inputs. Machine learning has played a vital role in improving the controls and increasing the number of applications of these kinds of robots in the real world. In this paper relevant research in modeling, design, intelligent control, sensing, and practical applications of soft robots has been discussed.},
-	booktitle = {2020 21st International Arab Conference on Information Technology ({ACIT})},
+	booktitle = {International Arab Conference on Information Technology ({ACIT})},
 	author = {Mirza, Nada Masood},
 	month = nov,
 	year = {2020},
@@ -201,8 +221,7 @@
 @inproceedings{gillespie_learning_2018,
 	title = {Learning nonlinear dynamic models of soft robots for model predictive control with neural networks},
 	doi = {10.1109/ROBOSOFT.2018.8404894},
-	abstract = {Soft robots have the potential to significantly change the way that robots interact with the environment and with humans. However, accurately modeling soft robot dynamics in order to do model-based control is extremely time consuming and difficult. neural networks are a powerful tool for modeling systems with complex dynamics such as an inflatable robot link with antagonistic pneumatic actuation. Unfortunately it is also difficult to apply standard model-based control techniques using a neural net. In this work, we show that the gradients used within a neural net to relate system states and inputs to outputs can be used to formulate a linearized discrete state space representation of the system. Using the state space representation, model predictive control can be developed with a one degree of freedom soft robot to achieve position control within 2° of the commanded joint angle. Additionally, control using the model derived from the neural net has similar performance to control using a model derived from first principles that took significantly longer to develop. This shows the potential of combining empirical modeling approaches with model-based control for soft robots.},
-	booktitle = {2018 {IEEE} International Conference on Soft Robotics ({RoboSoft})},
+	booktitle = {International Conference on Soft Robotics ({RoboSoft})},
 	author = {Gillespie, Morgan T. and Best, Charles M. and Townsend, Eric C. and Wingate, David and Killpack, Marc D.},
 	month = apr,
 	year = {2018},
@@ -216,30 +235,28 @@
 	volume = {35},
 	issn = {1941-0468},
 	doi = {10.1109/TRO.2018.2878318},
-	abstract = {Dynamic control of soft robotic manipulators is an open problem yet to be well explored and analyzed. Most of the current applications of soft robotic manipulators utilize static or quasi-dynamic controllers based on kinematic models or linearity in the joint space. However, such approaches are not truly exploiting the rich dynamics of a soft-bodied system. In this paper, we present a model-based policy learning algorithm for closed-loop predictive control of a soft robotic manipulator. The forward dynamic model is represented using a recurrent neural network. The closed-loop policy is derived using trajectory optimization and supervised learning. The approach is verified first on a simulated piecewise constant strain model of a cable driven under-actuated soft manipulator. Furthermore, we experimentally demonstrate on a soft pneumatically actuated manipulator how closed-loop control policies can be derived that can accommodate variable frequency control and unmodeled external loads.},
 	number = {1},
-	journal = {IEEE Transactions on Robotics},
+	journal = {\TRO},
 	author = {Thuruthel, Thomas George and Falotico, Egidio and Renda, Federico and Laschi, Cecilia},
 	month = feb,
 	year = {2019},
-	note = {Conference Name: IEEE Transactions on Robotics},
-	keywords = {Aerospace electronics, Computational modeling, Dynamic control, machine learning, manipulation, Manipulator dynamics, reinforcement learning, soft robotics, Soft robotics, Trajectory optimization},
 	pages = {124--134},
-	file = {IEEE Xplore Abstract Record:/home/drm/Zotero/storage/PGR25QGG/8531756.html:text/html},
 }
 
-@article{bruder_modeling_2019,
-	title = {Modeling and Control of Soft Robots Using the Koopman Operator and Model Predictive Control},
-	url = {http://arxiv.org/abs/1902.02827},
-	abstract = {Controlling soft robots with precision is a challenge due in large part to the difficulty of constructing models that are amenable to model-based control design techniques. Koopman Operator Theory offers a way to construct explicit linear dynamical models of soft robots and to control them using established model-based linear control methods. This method is data-driven, yet unlike other data-driven models such as neural networks, it yields an explicit control-oriented linear model rather than just a "black-box" input-output mapping. This work describes this Koopman-based system identification method and its application to model predictive controller design. A model and MPC controller of a pneumatic soft robot arm was constructed via the method, and its performance was evaluated over several trajectory following tasks in the real-world. On all of the tasks, the Koopman-based MPC controller outperformed a benchmark MPC controller based on a linear state-space model of the same system.},
-	urldate = {2021-09-14},
-	journal = {arXiv:1902.02827 [cs]},
-	author = {Bruder, Daniel and Gillespie, Brent and Remy, C. David and Vasudevan, Ram},
-	month = jul,
-	year = {2019},
-	note = {arXiv: 1902.02827},
-	keywords = {Computer Science - Robotics},
-	file = {arXiv Fulltext PDF:/home/drm/Zotero/storage/QUNERNG4/Bruder et al. - 2019 - Modeling and Control of Soft Robots Using the Koop.pdf:application/pdf;arXiv.org Snapshot:/home/drm/Zotero/storage/WJRD9GGM/1902.html:text/html},
+@inproceedings{bruder_modeling_2019,
+  author    = {Daniel Bruder and
+               Brent Gillespie and
+               C. David Remy and
+               Ram Vasudevan},
+  editor    = {Antonio Bicchi and
+               Hadas Kress{-}Gazit and
+               Seth Hutchinson},
+  title     = {Modeling and Control of Soft Robots Using the {K}oopman Operator and
+               Model Predictive Control},
+  booktitle = {\RSS},
+  year      = {2019},
+  url       = {https://doi.org/10.15607/RSS.2019.XV.060},
+  doi       = {10.15607/RSS.2019.XV.060},
 }
 
 @article{kalman_new_1960,
@@ -249,17 +266,7 @@
 	journal = {Journal of Basic Engineering},
 	author = {Kalman, R.E.},
 	year = {1960},
-	note = {Publisher: Citeseer},
 	pages = {35--45},
-}
-
-@article{terzi_learning_2021,
-	title = {Learning model predictive control with long short-term memory networks},
-	volume = {Early Access},
-	number = {n/a},
-	journal = {International Journal of Robust and Nonlinear Control},
-	author = {Terzi, Enrico and Bonassi, Fabio and Farina, Marcello and Scattolini, Riccardo},
-	year = {2021},
 }
 
 @article{lipton_critical_2015,
@@ -279,12 +286,14 @@
 }
 
 @article{muller_meshless_nodate,
-	title = {Meshless Deformations Based on Shape Matching},
-	abstract = {We present a new approach for simulating deformable objects. The underlying model is geometrically motivated. It handles pointbased objects and does not need connectivity information. The approach does not require any pre-processing, is simple to compute, and provides unconditionally stable dynamic simulations.},
-	language = {en},
-	author = {Muller, Matthias and Heidelberger, Bruno and Teschner, Matthias and Gross, Markus},
-	pages = {8},
-	file = {Muller et al. - Meshless Deformations Based on Shape Matching.pdf:/home/drm/Zotero/storage/S6YW4RGJ/Muller et al. - Meshless Deformations Based on Shape Matching.pdf:application/pdf},
+  title={Meshless deformations based on shape matching},
+  author={M{\"u}ller, Matthias and Heidelberger, Bruno and Teschner, Matthias and Gross, Markus},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={24},
+  number={3},
+  pages={471--478},
+  year={2005},
+  publisher={ACM New York, NY, USA}
 }
 
 @article{sulsky_particle_1994,
@@ -312,7 +321,6 @@
 	journal = {Neural computation},
 	author = {Hochreiter, Sepp and Schmidhuber, Jürgen},
 	year = {1997},
-	note = {Publisher: MIT Press},
 	pages = {1735--1780},
 }
 
@@ -320,7 +328,7 @@
 	title = {Real-time control of physically based simulations using gentle forces},
 	volume = {27},
 	number = {5},
-	journal = {ACM transactions on graphics (TOG)},
+	journal = {ACM Transactions on Graphics},
 	author = {Barbič, Jernej and Popović, Jovan},
 	year = {2008},
 	pages = {1--10},
@@ -345,7 +353,7 @@
 
 @inproceedings{tassa_control-limited_2014,
 	title = {Control-limited differential dynamic programming},
-	booktitle = {2014 {IEEE} International Conference on Robotics and Automation ({ICRA})},
+	booktitle = {\ICRA},
 	publisher = {IEEE},
 	author = {Tassa, Yuval and Mansard, Nicolas and Todorov, Emo},
 	year = {2014},
@@ -394,8 +402,8 @@
 	publisher = {American Institute of Aeronautics and Astronautics},
 	author = {Bualat, Maria and Barlow, Jonathan and Fong, Terrence and Provencher, Chris and Smith, Trey},
 	doi = {10.2514/6.2015-4643},
-	note = {\_eprint: https://arc.aiaa.org/doi/pdf/10.2514/6.2015-4643},
 	file = {AIAA Snapshot:/home/drm/Zotero/storage/263GRHJI/6.html:text/html},
+    year={2015}
 }
 @inproceedings{ha-world-models,
   author    = {David Ha and
@@ -407,9 +415,7 @@
                Nicol{\`{o}} Cesa{-}Bianchi and
                Roman Garnett},
   title     = {Recurrent World Models Facilitate Policy Evolution},
-  booktitle = {Advances in Neural Information Processing Systems 31: Annual Conference
-               on Neural Information Processing Systems 2018, NeurIPS 2018, December
-               3-8, 2018, Montr{\'{e}}al, Canada},
+  booktitle = {\NeurIPS},
   pages     = {2455--2467},
   year      = {2018},
   url       = {https://proceedings.neurips.cc/paper/2018/hash/2de5d16682c3c35007e4e92982f1a2ba-Abstract.html},
@@ -420,13 +426,13 @@
 
 @book{nelles-nonlinear-sysid,
 	author = {Nelles, Oliver},
-	title = {Nonlinear system identification},
+	title = {Nonlinear System Identification},
 	publisher = {Springer},
 	year = {2001},
 	address = {Berlin}
 }
 @book{brunton2019data,
-  title={Data-driven science and engineering: Machine learning, dynamical systems, and control},
+  title={Data-driven Science and Engineering: Machine Learning, Dynamical Systems, and Control},
   author={Brunton, Steven L and Kutz, J Nathan},
   year={2019},
   publisher={Cambridge University Press}
