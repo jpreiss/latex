@@ -22,7 +22,8 @@
 \definecolor{TextNote}{rgb}{0.44, 0.44, 0.46}
 
 % A saturated but legible color to draw attention to some text.
-\definecolor{TextEmph}{rgb}{0.25, 0.25, 0.95}
+\definecolor{CaltechOrange}{rgb}{1.00, 0.42, 0.04}
+\colorlet{TextEmph}{CaltechOrange!90!black}
 
 % A color used to highlight "good" terms in an equation.
 \definecolor{TextGood}{rgb}{0.0, 0.7, 0.1}
@@ -37,7 +38,7 @@
 \setbeamercolor{normal text}{fg=DarkGrey!30!Black}
 
 % Serif font everywhere.
-\usefonttheme[mathonly]{serif}
+\usefonttheme[onlymath]{serif}
 
 
 %--------%
@@ -49,7 +50,7 @@
 % features of the smaller font size without raising text density.
 
 % Reduce paper size.
-\geometry{papersize={11cm,7cm}}
+\geometry{papersize={13cm,9cm}}
 
 % Reduce margins to accompany smaller paper.
 \setbeamersize{text margin left=6mm,text margin right=6mm}
