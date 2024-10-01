@@ -23,13 +23,21 @@
 
 % A saturated but legible color to draw attention to some text.
 \definecolor{CaltechOrange}{rgb}{1.00, 0.42, 0.04}
-\colorlet{TextEmph}{CaltechOrange!90!black}
+\definecolor{JobTalkBlue}{HTML}{0081EA}
+%\colorlet{TextEmph}{CaltechOrange!90!black}
+\colorlet{TextEmph}{JobTalkBlue}
 
 % A color used to highlight "good" terms in an equation.
 \definecolor{TextGood}{rgb}{0.0, 0.7, 0.1}
 
 % A color used to highlight "bad" terms in an equation.
 \definecolor{TextBad}{rgb}{0.8, 0.0, 0.1}
+
+% Matplotlib colors: TODO use actual ones
+\definecolor{cmplblue}{rgb}{0.1, 0.2, 0.9}
+\definecolor{cmplorange}{rgb}{0.9, 0.4, 0.1}
+\newcommand{\mplblue}[1]{\textcolor{cmplblue}{#1}}
+\newcommand{\mplorange}[1]{\textcolor{cmplorange}{#1}}
 
 % Set DarkGrey as the main color for titlebar, etc.
 \usecolortheme[named=DarkGrey]{structure}
@@ -137,4 +145,11 @@
 \newcommand{\revealbad}[1]{\only<1>{#1} \only<2>{\color{TextBad}#1}}
 \newcommand{\revealgoodrow}[1]{\only<1>{#1} \only<2>{\rowstyle{\color{TextGood}} #1}}
 \newcommand{\revealbadrow}[1]{\only<1>{#1} \only<2>{\rowstyle{\color{TextBad}} #1}}
+
+% Tool to assign names to current overlay such as in a long pause sequence.
+\makeatletter
+\DeclareRobustCommand*{\savepause}[1]{\only<1>{\immediate\write\@auxout{\string\pauseentry{\the\c@framenumber}{#1}{\the\c@beamerpauses}}}}
+\newcommand*{\usepause}[1]{\@ifundefined{pauses@\the\c@framenumber @#1}{1}{\@nameuse{pauses@\the\c@framenumber @#1}}}
+\newcommand*{\pauseentry}[3]{\global\@namedef{pauses@#1@#2}{#3}}
+\makeatother
 
