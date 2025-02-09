@@ -19,6 +19,10 @@
 \def\mydefc#1{\expandafter\def\csname c#1\endcsname{\mathcal{#1}}}
 \def\mydefallc#1{\ifx#1\mydefallc\else\mydefc#1\expandafter\mydefallc\fi}
 \mydefallc ABCDEFGHIJKLMNOPQRSTUVWXYZ\mydefallc
+% Defines bold macros such that \ba = \mathbf{a}, and so on.
+\def\mydefb#1{\expandafter\def\csname b#1\endcsname{\mathbf{#1}}}
+\def\mydefallb#1{\ifx#1\mydefallb\else\mydefb#1\expandafter\mydefallb\fi}
+\mydefallb abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\mydefallb
 
 % Sets of numbers.
 \newcommand{\N}{\mathbb{N}}
@@ -128,6 +132,7 @@
 \DeclareMathOperator{\Normal}{\mathcal{N}}
 \DeclareMathOperator{\Binomial}{Binomial}
 \DeclareMathOperator{\Uniform}{Uniform}
+\DeclareMathOperator{\Beta}{Beta}
 
 % Other probability stuff.
 \DeclareMathOperator*{\E}{\mathbb{E}}
@@ -144,6 +149,7 @@
 \DeclareMathOperator{\VCdim}{VCdim}
 \DeclareMathOperator{\Ldim}{Ldim}
 \DeclareMathOperator{\Reg}{Reg}
+\DeclareMathOperator{\BReg}{BReg}
 \DeclareMathOperator{\pReg}{\overline{Reg}}
 \DeclareMathOperator{\fat}{fat}
 \DeclareMathOperator{\sfat}{sfat}

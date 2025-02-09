@@ -5,6 +5,7 @@
 % and regular articles.
 
 \PassOptionsToPackage{table,dvipsnames}{xcolor}
+\PassOptionsToPackage{breakable}{tcolorbox}
 
 \RequirePackage{adjustbox}
 \RequirePackage{algorithm}
@@ -49,7 +50,7 @@
 \newcommand{\greencheck}{\textcolor{Emerald}{$\checkmark\ $}}
 
 % Page layout tools.
-\newtcolorbox{boxnote}{%
+\newtcolorbox{boxnote}[1][]{
 	colback=black!8!white,
 	colframe=black,
 	sharp corners,
@@ -58,7 +59,16 @@
 	leftrule=0.15mm,
 	bottomrule=0.15mm,
 	beforeafter skip=8mm,
-	before upper={\parindent15pt}
+	before upper={\parindent15pt},
+	#1
+}
+
+\newtcolorbox{boxalert}[1][]{
+	colframe=red,
+	colback=red!10,
+	coltitle=white,
+	coltext=red!70!black,
+	#1
 }
 
 
@@ -103,6 +113,7 @@
 \newcommand{\ICLR}{International Conference on Learning Representations {(ICLR)}}
 \newcommand{\LFOURDC}{Conference on Learning for Dynamics and Control {(L4DC)}}
 \newcommand{\COLT}{Conference on Learning Theory {(COLT)}}
+\newcommand{\ALT}{Conference on Algorithmic Learning Theory {(ALT)}}
 \newcommand{\CVPR}{International Conference on Computer Vision and Pattern Recognition {(CVPR)}}
 \newcommand{\CDC}{Conference on Decision and Control {(CDC)}}
 \newcommand{\RAL}{{IEEE} Robotics and Automation Letters}
@@ -112,3 +123,12 @@
 \newcommand{\IJRR}{International Journal of Robotics Research}
 \newcommand{\TRO}{{IEEE} Transactions on Robotics}
 \newcommand{\IJCAI}{International Joint Conference on Artificial Intelligence {(IJCAI)}}
+
+
+% Add-ons to algpseudocode.
+
+% "with probability" block combining structure of for-loop and if-else.
+% Adapted from algpseudocode.sty without fully understanding.
+\algdef{SE}[WP]{WithProb}{EndWithProb}[1]{\textbf{with probability}\ #1:}{\textbf{end}}%
+\algdef{Ce}[ELSE]{WP}{Else}{EndWithProb}{\algorithmicelse}%
+
