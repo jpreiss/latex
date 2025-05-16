@@ -26,6 +26,9 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{wasysym} % Smileys and such.
 
+% Simplify email links
+\newcommand{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
+
 % For documents when the particular day is not important.
 \newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
 
