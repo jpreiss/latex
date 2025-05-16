@@ -112,6 +112,7 @@
 % Optimization.
 \DeclareMathOperator*{\argmax}{argmax\ }
 \DeclareMathOperator*{\argmin}{argmin\ }
+\DeclareMathOperator*{\find}{find}
 \DeclareMathOperator*{\minimize}{minimize\ }
 \DeclareMathOperator*{\maximize}{maximize\ }
 \DeclareMathOperator{\OPT}{OPT}
@@ -138,11 +139,16 @@
 \DeclareMathOperator*{\E}{\mathbb{E}}
 \newcommand{\iid}{\mathrm{iid}}
 \DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
 \newcommand{\simplex}[1]{\triangle(#1)} % TODO: how to make it use \left( \right) without a preceding space?
 \newcommand{\Indicator}[1]{\I_{#1}}
 \newcommand{\IndicatorPred}[1]{\I_{[#1]}}
 \newcommand{\IndicatorSet}[1]{\I_{\{#1\}}}
 \newcommand{\cond}{\;\middle\vert\;}
+\newcommand{\DKL}{D_{\mathrm{KL}}}
+\newcommand{\TV}{\mathrm{TV}}
+\renewcommand{\wp}{\mathrm{w.p.\ }}
+\newcommand{\whp}{\mathrm{w.h.p.\ }}
 
 % Learning stuff.
 \DeclareMathOperator{\Rad}{R}
@@ -166,8 +172,11 @@
 % Miscellaneous.
 \renewcommand{\th}{^{\mathrm{th}}}
 \DeclareMathOperator{\clip}{clip}
+\DeclareMathOperator{\rclip}{rclip} % ratio clip
 \DeclareMathOperator{\sign}{sign}
 \newcommand{\eps}{\varepsilon}
 \newcommand{\nofrac}[2]{\left. #1 \middle/ #2 \right.} % to easily switch between frac, nicefrac, and plain old num / denom
 \newcommand{\defeq}{\triangleq}  % in case we decide to use := or something
 \newcommand{\qeq}{\stackrel{?}{=}}
+\newcommand{\old}{\mathrm{old}}
+\newcommand{\new}{\mathrm{new}}
