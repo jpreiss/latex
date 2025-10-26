@@ -53,6 +53,7 @@
 
 \newcommand{\redx}{\textcolor{red}{$\times\ $}}
 \newcommand{\greencheck}{\textcolor{Emerald}{$\checkmark\ $}}
+\newcommand{\graytilde}{\textcolor{gray}{$\sim\ $}}
 
 % Page layout tools.
 \newtcolorbox{boxnote}[1][]{
@@ -93,6 +94,8 @@
    }
  }
 \ExplSyntaxOff
+
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
 
 
 % For Matplotlib's .pgf output that uses external bitmaps.
