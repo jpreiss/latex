@@ -28,13 +28,14 @@
 \RequirePackage{wasysym} % Smileys and such.
 
 % Simplify email links
-\newcommand{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
+\newcommand{\emailurl}[1]{\href{mailto:#1}{\texttt{#1}}}
 
 % For documents when the particular day is not important.
 \newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
 
 % Draft annotation tools.
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO: #1}}}
+\newcommand{\todocite}{\textcolor{red}{\textbf{(TODO: cite)}}}
 \newcommand{\toadd}[1]{\textcolor{teal}{\emph{Insert: #1}}}
 \newcommand{\idea}[1]{\textcolor{ProcessBlue}{\textbf{IDEA: #1}}}
 \definecolor{ntoh}{rgb}{0.5, 0.15, 0.8}
