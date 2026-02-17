@@ -42,6 +42,7 @@
 \newcommand{\nicetohave}[1]{\textcolor{ntoh}{\textbf{nice2have: #1}}}
 \definecolor{qtodocolor}{rgb}{0.1, 0.5, 1.0}
 \newcommand{\qtodo}[1]{\textcolor{qtodocolor}{\textbf{Q-TODO: #1}}}
+\definecolor{hilite}{rgb}{0.95, 1.0, 0.5}
 
 % Standard colors for pgfplots
 \newcommand{\plotcolora}{black}
@@ -49,12 +50,15 @@
 \newcommand{\plotcolorc}{RoyalBlue}
 
 % Hyphenations.
+\hyphenation{RADAR}
+\hyphenation{LIDAR}
 \hyphenation{Open-AI}
 \hyphenation{socio-economic}
 
 \newcommand{\redx}{\textcolor{red}{$\times\ $}}
 \newcommand{\greencheck}{\textcolor{Emerald}{$\checkmark\ $}}
 \newcommand{\graytilde}{\textcolor{gray}{$\sim\ $}}
+\newcommand{\coloremph}[1]{\textcolor{ProcessBlue!80!blue}{#1}}
 
 % Page layout tools.
 \newtcolorbox{boxnote}[1][]{
@@ -71,10 +75,10 @@
 }
 
 \newtcolorbox{boxalert}[1][]{
-	colframe=red,
+	colframe=red!90!black,
 	colback=red!10,
 	coltitle=white,
-	coltext=red!70!black,
+	coltext=red!80!black,
 	#1
 }
 
